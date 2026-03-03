@@ -84,6 +84,9 @@ light:
     internal: False
     restore_mode: ALWAYS_OFF
     entity_category: config
+    web_server:
+      sorting_group_id: controls
+      sorting_weight: 10
 
 number:
   - platform: template
@@ -102,6 +105,8 @@ number:
     entity_category: config
     on_value:
       - lambda: 'id(illuminance_sensor).update();'
+    web_server:
+      sorting_weight: 10
 
 sensor:
   - platform: bh1750
@@ -217,12 +222,15 @@ select:
 web_server:
   version: 3
   sorting_groups:
+    - id: controls
+      name: "Controls"
+      sorting_weight: 10
     - id: zones
       name: "Zones"
-      sorting_weight: 10
+      sorting_weight: 20
     - id: polygon_zones
       name: "Polygon zones"
-      sorting_weight: 20
+      sorting_weight: 30
     - id: tuning              # cf https://docs.everythingsmart.io/s/products/doc/how-to-tune-your-epl-sensor-JGBteItQem
       name: "Tuning"
-      sorting_weight: 30
+      sorting_weight: 40
