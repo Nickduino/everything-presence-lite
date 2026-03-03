@@ -219,9 +219,6 @@ switch:
     optimistic: True
     entity_category: config
     icon: "mdi:rotate-180"
-    web_server:
-      sorting_group_id: tuning
-      sorting_weight: 100
 
   - platform: template
     name: "Entry Exit Enabled"
@@ -376,6 +373,9 @@ number:
     initial_value: 10
     unit_of_measurement: "%"
     entity_category: config
+    web_server:
+      sorting_group_id: presence_logic
+      sorting_weight: 22
 
   - platform: template
     name: "Assume Present Timeout"
