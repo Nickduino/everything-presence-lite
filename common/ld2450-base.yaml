@@ -253,7 +253,7 @@ binary_sensor:
     filters:
       - delayed_off: !lambda return (id(off_delay).state * 1000);
     web_server:
-      sorting_group_id: occupancy
+      sorting_group_id: occupancy_group
       sorting_weight: 10
 
   - platform: template
@@ -263,7 +263,7 @@ binary_sensor:
     filters:
       - delayed_off: !lambda return (id(zone_1_off_delay).state * 1000);
     web_server:
-      sorting_group_id: occupancy
+      sorting_group_id: occupancy_group
       sorting_weight: 40
   - platform: template
     name: "Zone 2 Occupancy"
@@ -272,7 +272,7 @@ binary_sensor:
     filters:
       - delayed_off: !lambda return (id(zone_2_off_delay).state * 1000);
     web_server:
-      sorting_group_id: occupancy
+      sorting_group_id: occupancy_group
       sorting_weight: 60
     disabled_by_default: true
   - platform: template
@@ -282,7 +282,7 @@ binary_sensor:
     filters:
       - delayed_off: !lambda return (id(zone_3_off_delay).state * 1000);
     web_server:
-      sorting_group_id: occupancy
+      sorting_group_id: occupancy_group
       sorting_weight: 80
     disabled_by_default: true
   - platform: template
@@ -292,7 +292,7 @@ binary_sensor:
     filters:
       - delayed_off: !lambda return (id(zone_4_off_delay).state * 1000);
     web_server:
-      sorting_group_id: occupancy
+      sorting_group_id: occupancy_group
       sorting_weight: 100
     disabled_by_default: true
 
@@ -301,28 +301,28 @@ binary_sensor:
     id: target1_active
     entity_category: diagnostic
     web_server:
-      sorting_group_id: occupancy
+      sorting_group_id: occupancy_group
       sorting_weight: 140
   - platform: template
     name: "Target 2 Active"
     id: target2_active
     entity_category: diagnostic
     web_server:
-      sorting_group_id: occupancy
+      sorting_group_id: occupancy_group
       sorting_weight: 210
   - platform: template
     name: "Target 3 Active"
     id: target3_active
     entity_category: diagnostic
     web_server:
-      sorting_group_id: occupancy
+      sorting_group_id: occupancy_group
       sorting_weight: 280
   - platform: template
     name: "Assumed Present"
     id: assumed_present
     entity_category: diagnostic
     web_server:
-      sorting_group_id: occupancy
+      sorting_group_id: occupancy_group
       sorting_weight: 20
 
 number:
@@ -930,7 +930,7 @@ sensor:
     update_interval: never
     entity_category: diagnostic
     web_server:
-      sorting_group_id: occupancy
+      sorting_group_id: occupancy_group
       sorting_weight: 30
   - platform: template
     name: "Target 1 X"
@@ -1036,7 +1036,7 @@ sensor:
     state_class: measurement
     entity_category: diagnostic
     web_server:
-      sorting_group_id: occupancy
+      sorting_group_id: occupancy_group
       sorting_weight: 150
   - platform: template
     name: "Target 2 Angle"
@@ -1046,7 +1046,7 @@ sensor:
     state_class: measurement
     entity_category: diagnostic
     web_server:
-      sorting_group_id: occupancy
+      sorting_group_id: occupancy_group
       sorting_weight: 220
   - platform: template
     name: "Target 3 Angle"
@@ -1056,7 +1056,7 @@ sensor:
     state_class: measurement
     entity_category: diagnostic
     web_server:
-      sorting_group_id: occupancy
+      sorting_group_id: occupancy_group
       sorting_weight: 290
   - platform: template
     name: "Target 1 Distance"
@@ -1067,7 +1067,7 @@ sensor:
     device_class: distance
     entity_category: diagnostic
     web_server:
-      sorting_group_id: occupancy
+      sorting_group_id: occupancy_group
       sorting_weight: 160
   - platform: template
     name: "Target 2 Distance"
@@ -1078,7 +1078,7 @@ sensor:
     device_class: distance
     entity_category: diagnostic
     web_server:
-      sorting_group_id: occupancy
+      sorting_group_id: occupancy_group
       sorting_weight: 230
   - platform: template
     name: "Target 3 Distance"
@@ -1089,7 +1089,7 @@ sensor:
     device_class: distance
     entity_category: diagnostic
     web_server:
-      sorting_group_id: occupancy
+      sorting_group_id: occupancy_group
       sorting_weight: 300
   - platform: template
     name: "Zone 1 Target Count"
@@ -1098,7 +1098,7 @@ sensor:
     unit_of_measurement: " "
     entity_category: diagnostic
     web_server:
-      sorting_group_id: occupancy
+      sorting_group_id: occupancy_group
       sorting_weight: 50
   - platform: template
     name: "Zone 2 Target Count"
@@ -1108,7 +1108,7 @@ sensor:
     unit_of_measurement: " "
     entity_category: diagnostic
     web_server:
-      sorting_group_id: occupancy
+      sorting_group_id: occupancy_group
       sorting_weight: 70
   - platform: template
     name: "Zone 3 Target Count"
@@ -1118,7 +1118,7 @@ sensor:
     unit_of_measurement: " "
     entity_category: diagnostic
     web_server:
-      sorting_group_id: occupancy
+      sorting_group_id: occupancy_group
       sorting_weight: 90
   - platform: template
     name: "Zone 4 Target Count"
@@ -1128,7 +1128,7 @@ sensor:
     unit_of_measurement: " "
     entity_category: diagnostic
     web_server:
-      sorting_group_id: occupancy
+      sorting_group_id: occupancy_group
       sorting_weight: 110
   - platform: template
     name: "Occupancy Mask 1 Target Count"
@@ -1138,7 +1138,7 @@ sensor:
     unit_of_measurement: " "
     entity_category: diagnostic
     web_server:
-      sorting_group_id: occupancy
+      sorting_group_id: occupancy_group
       sorting_weight: 120
   - platform: template
     name: "Occupancy Mask 2 Target Count"
@@ -1148,7 +1148,7 @@ sensor:
     unit_of_measurement: " "
     entity_category: diagnostic
     web_server:
-      sorting_group_id: occupancy
+      sorting_group_id: occupancy_group
       sorting_weight: 130
 
 select:
