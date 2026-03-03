@@ -129,6 +129,9 @@ button:
       - uart.write:
           id: uart_bus
           data: [0xFD, 0xFC, 0xFB, 0xFA, 0x02, 0x00, 0xA3, 0x00, 0x04, 0x03, 0x02, 0x01]
+    web_server:
+      sorting_group_id: controls
+      sorting_weight: 40
   - platform: template
     name: "Factory Reset mmWave Sensor"
     id: factory_reset_mmwave_sensor
@@ -146,6 +149,9 @@ button:
       - switch.turn_off: mmwave_configuration
       - delay: 2s
       - button.press: reboot_mmwave_sensor
+    web_server:
+      sorting_group_id: controls
+      sorting_weight: 50
 
 switch:
   - platform: template
@@ -192,6 +198,9 @@ switch:
       - button.press: reboot_mmwave_sensor  # Reboot after enabling Bluetooth
       - delay: 2s
       - switch.turn_off: mmwave_configuration
+    web_server:
+      sorting_group_id: controls
+      sorting_weight: 60
 
   - platform: template
     name: "Stale Target Reset"
@@ -199,6 +208,9 @@ switch:
     restore_mode: RESTORE_DEFAULT_OFF 
     optimistic: True
     entity_category: config
+    web_server:
+      sorting_group_id: tuning
+      sorting_weight: 10
 
   - platform: template
     name: "Upside Down Mounting"
@@ -207,6 +219,9 @@ switch:
     optimistic: True
     entity_category: config
     icon: "mdi:rotate-180"
+    web_server:
+      sorting_group_id: tuning
+      sorting_weight: 100
 
   - platform: template
     name: "Entry Exit Enabled"
@@ -214,6 +229,9 @@ switch:
     restore_mode: RESTORE_DEFAULT_OFF
     optimistic: true
     entity_category: config
+    web_server:
+      sorting_group_id: zones
+      sorting_weight: 
 
   - platform: template
     name: "Polygon Zones"
@@ -223,6 +241,9 @@ switch:
     entity_category: config
     icon: "mdi:vector-polygon"
     disabled_by_default: false
+    web_server:
+      sorting_group_id: polygon_zones
+      sorting_weight: 
 
 binary_sensor:
   - platform: template
