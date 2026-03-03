@@ -19,14 +19,28 @@ update:
   - platform: http_request
     id: update_http_request
     name: Everything Presence Lite Firmware
-    source: https://everythingsmarthome.github.io/everything-presence-lite/everything-presence-lite-ha-manifest.json
+    source: https://Nickduino.github.io/everything-presence-lite/everything-presence-lite-ha-manifest.json
     disabled_by_default: true
 
 dashboard_import:
-  package_import_url: github://everythingsmarthome/everything-presence-lite/everything-presence-lite-ha.yaml@main
+  package_import_url: github://Nickduino/everything-presence-lite/everything-presence-lite-ha.yaml@main
   import_full_config: false # or true
 
 packages:
-  device_base: !include common/everything-presence-lite-base.yaml
-  ld2450_base: !include common/ld2450-base.yaml
-  bluetooth_base: !include common/bluetooth-base.yaml
+  device_base:
+    url: https://github.com/Nickduino/everything-presence-lite
+    file: common/everything-presence-lite-base.yaml
+    ref: main
+    refresh: 0s
+
+  ld2450_base:
+    url: https://github.com/Nickduino/everything-presence-lite
+    file: common/ld2450-base.yaml
+    ref: main
+    refresh: 0s
+
+  bluetooth_base:
+    url: https://github.com/Nickduino/everything-presence-lite
+    file: common/bluetooth-base.yaml
+    ref: main
+    refresh: 0s

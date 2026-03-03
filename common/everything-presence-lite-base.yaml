@@ -87,6 +87,18 @@ light:
     web_server:
       sorting_group_id: controls
       sorting_weight: 10
+  - platform: status_led
+    name: ESP32 red LED (TX)
+    id: esp32_red_led
+    pin:
+      number: 1
+      inverted: true
+    internal: False
+    restore_mode: ALWAYS_OFF
+    entity_category: config
+    web_server:
+      sorting_group_id: controls
+      sorting_weight: 11
 
 number:
   - platform: template
@@ -162,7 +174,7 @@ button:
     on_press:
       - logger.log: "Applying firmware update based on selected configuration"
       - lambda: |-
-          std::string base_url = "https://everythingsmarthome.github.io/everything-presence-lite/everything-presence-lite-ha";
+          std::string base_url = "https://nickduino.github.io/everything-presence-lite/everything-presence-lite-ha";
           std::string variant = "${device_config.sensor_variant}";
           if (variant == "ld2450") {
             variant.clear();
