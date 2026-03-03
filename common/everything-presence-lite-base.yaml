@@ -243,6 +243,9 @@ select:
 web_server:
   version: 3
   sorting_groups:
+    - id: occupancy
+      name: "Occupancy"
+      sorting_weight: 5
     - id: controls
       name: "Controls"
       sorting_weight: 10
@@ -258,3 +261,6 @@ web_server:
     - id: tuning              # cf https://docs.everythingsmart.io/s/products/doc/how-to-tune-your-epl-sensor-JGBteItQem
       name: "Tuning"
       sorting_weight: 50
+
+    
+
