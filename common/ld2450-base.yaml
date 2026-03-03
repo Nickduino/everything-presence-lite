@@ -940,6 +940,9 @@ sensor:
     state_class: measurement
     device_class: distance
     entity_category: diagnostic
+    web_server:
+      sorting_group_id: occupancy_group
+      sorting_weight: 190
   - platform: template
     name: "Target 1 Y"
     id: target1_y
@@ -948,6 +951,9 @@ sensor:
     state_class: measurement
     device_class: distance
     entity_category: diagnostic
+    web_server:
+      sorting_group_id: occupancy_group
+      sorting_weight: 200
   - platform: template
     name: "Target 1 Speed"
     id: target1_speed
@@ -956,6 +962,9 @@ sensor:
     state_class: measurement
     device_class: speed
     entity_category: diagnostic
+    web_server:
+      sorting_group_id: occupancy_group
+      sorting_weight: 180
   - platform: template
     name: "Target 1 Resolution"
     id: target1_resolution
@@ -964,6 +973,9 @@ sensor:
     state_class: measurement
     device_class: distance
     entity_category: diagnostic
+    web_server:
+      sorting_group_id: occupancy_group
+      sorting_weight: 170
   - platform: template
     name: "Target 2 X"
     id: target2_x
@@ -972,6 +984,9 @@ sensor:
     state_class: measurement
     device_class: distance
     entity_category: diagnostic
+    web_server:
+      sorting_group_id: occupancy_group
+      sorting_weight: 260
   - platform: template
     name: "Target 2 Y"
     id: target2_y
@@ -980,6 +995,9 @@ sensor:
     state_class: measurement
     device_class: distance
     entity_category: diagnostic
+    web_server:
+      sorting_group_id: occupancy_group
+      sorting_weight: 270
   - platform: template
     name: "Target 2 Speed"
     id: target2_speed
@@ -988,6 +1006,9 @@ sensor:
     state_class: measurement
     device_class: speed
     entity_category: diagnostic
+    web_server:
+      sorting_group_id: occupancy_group
+      sorting_weight: 250
   - platform: template
     name: "Target 2 Resolution"
     id: target2_resolution
@@ -996,6 +1017,9 @@ sensor:
     state_class: measurement
     device_class: distance
     entity_category: diagnostic
+    web_server:
+      sorting_group_id: occupancy_group
+      sorting_weight: 240
   - platform: template
     name: "Target 3 X"
     id: target3_x
@@ -1004,6 +1028,9 @@ sensor:
     state_class: measurement
     device_class: distance
     entity_category: diagnostic
+    web_server:
+      sorting_group_id: occupancy_group
+      sorting_weight: 330
   - platform: template
     name: "Target 3 Y"
     id: target3_y
@@ -1012,6 +1039,9 @@ sensor:
     state_class: measurement
     device_class: distance
     entity_category: diagnostic
+    web_server:
+      sorting_group_id: occupancy_group
+      sorting_weight: 340
   - platform: template
     name: "Target 3 Speed"
     id: target3_speed
@@ -1020,6 +1050,9 @@ sensor:
     state_class: measurement
     device_class: speed
     entity_category: diagnostic
+    web_server:
+      sorting_group_id: occupancy_group
+      sorting_weight: 320
   - platform: template
     name: "Target 3 Resolution"
     id: target3_resolution
@@ -1028,6 +1061,9 @@ sensor:
     state_class: measurement
     device_class: distance
     entity_category: diagnostic
+    web_server:
+      sorting_group_id: occupancy_group
+      sorting_weight: 310
   - platform: template
     name: "Target 1 Angle"
     id: target1_angle
