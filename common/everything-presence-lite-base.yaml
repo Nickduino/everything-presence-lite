@@ -243,7 +243,7 @@ select:
 web_server:
   version: 3
   sorting_groups:
-    - id: occupancy
+    - id: occupancy_group
       name: "Occupancy"
       sorting_weight: 5
     - id: controls
