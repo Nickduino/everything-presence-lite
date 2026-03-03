@@ -209,8 +209,8 @@ switch:
     optimistic: True
     entity_category: config
     web_server:
-      sorting_group_id: tuning
-      sorting_weight: 10
+      sorting_group_id: presence_logic
+      sorting_weight: 40
 
   - platform: template
     name: "Upside Down Mounting"
@@ -230,8 +230,8 @@ switch:
     optimistic: true
     entity_category: config
     web_server:
-      sorting_group_id: zones
-      sorting_weight: 100
+      sorting_group_id: presence_logic
+      sorting_weight: 20
 
   - platform: template
     name: "Polygon Zones"
@@ -252,6 +252,9 @@ binary_sensor:
     id: occupancy
     filters:
       - delayed_off: !lambda return (id(off_delay).state * 1000);
+    web_server:
+      sorting_group_id: occupancy
+      sorting_weight: 10
 
   - platform: template
     name: "Zone 1 Occupancy"
@@ -259,12 +262,18 @@ binary_sensor:
     id: zone1_occupancy
     filters:
       - delayed_off: !lambda return (id(zone_1_off_delay).state * 1000);
+    web_server:
+      sorting_group_id: occupancy
+      sorting_weight: 40
   - platform: template
     name: "Zone 2 Occupancy"
     device_class: occupancy
     id: zone2_occupancy
     filters:
       - delayed_off: !lambda return (id(zone_2_off_delay).state * 1000);
+    web_server:
+      sorting_group_id: occupancy
+      sorting_weight: 60
     disabled_by_default: true
   - platform: template
     name: "Zone 3 Occupancy"
@@ -272,6 +281,9 @@ binary_sensor:
     id: zone3_occupancy
     filters:
       - delayed_off: !lambda return (id(zone_3_off_delay).state * 1000);
+    web_server:
+      sorting_group_id: occupancy
+      sorting_weight: 80
     disabled_by_default: true
   - platform: template
     name: "Zone 4 Occupancy"
@@ -279,24 +291,39 @@ binary_sensor:
     id: zone4_occupancy
     filters:
       - delayed_off: !lambda return (id(zone_4_off_delay).state * 1000);
+    web_server:
+      sorting_group_id: occupancy
+      sorting_weight: 100
     disabled_by_default: true
 
   - platform: template
     name: "Target 1 Active"
     id: target1_active
     entity_category: diagnostic
+    web_server:
+      sorting_group_id: occupancy
+      sorting_weight: 140
   - platform: template
     name: "Target 2 Active"
     id: target2_active
     entity_category: diagnostic
+    web_server:
+      sorting_group_id: occupancy
+      sorting_weight: 210
   - platform: template
     name: "Target 3 Active"
     id: target3_active
     entity_category: diagnostic
+    web_server:
+      sorting_group_id: occupancy
+      sorting_weight: 280
   - platform: template
     name: "Assumed Present"
     id: assumed_present
     entity_category: diagnostic
+    web_server:
+      sorting_group_id: occupancy
+      sorting_weight: 20
 
 number:
   - platform: template
@@ -310,6 +337,9 @@ number:
     unit_of_measurement: "s"
     initial_value: 15
     entity_category: config
+    web_server:
+      sorting_group_id: presence_logic
+      sorting_weight: 10
   - platform: template
     name: "Max Distance"
     id: distance
@@ -358,6 +388,9 @@ number:
     initial_value: 15
     unit_of_measurement: "s"
     entity_category: config
+    web_server:
+      sorting_group_id: presence_logic
+      sorting_weight: 30
 
   - platform: template
     name: "Entry Zone 1 Begin X"
@@ -544,6 +577,9 @@ number:
     unit_of_measurement: "s"
     initial_value: 15
     entity_category: config
+    web_server:
+      sorting_group_id: presence_logic
+      sorting_weight: 11
 
   - platform: template
     name: "Zone 2 Begin X"
@@ -613,6 +649,9 @@ number:
     initial_value: 15
     disabled_by_default: true
     entity_category: config
+    web_server:
+      sorting_group_id: presence_logic
+      sorting_weight: 12
 
   - platform: template
     name: "Zone 3 Begin X"
@@ -682,6 +721,9 @@ number:
     initial_value: 15
     disabled_by_default: true
     entity_category: config
+    web_server:
+      sorting_group_id: presence_logic
+      sorting_weight: 13
 
   - platform: template
     name: "Zone 4 Begin X"
@@ -751,6 +793,9 @@ number:
     initial_value: 15
     disabled_by_default: true
     entity_category: config
+    web_server:
+      sorting_group_id: presence_logic
+      sorting_weight: 14
 
   - platform: template
     name: "Occupancy Mask 1 Begin X"
@@ -872,6 +917,9 @@ number:
     restore_value: true
     initial_value: 30
     entity_category: config
+    web_server:
+      sorting_group_id: presence_logic
+      sorting_weight: 50
 
 sensor:
   - platform: template
@@ -881,6 +929,9 @@ sensor:
     accuracy_decimals: 0
     update_interval: never
     entity_category: diagnostic
+    web_server:
+      sorting_group_id: occupancy
+      sorting_weight: 30
   - platform: template
     name: "Target 1 X"
     id: target1_x
@@ -984,6 +1035,9 @@ sensor:
     unit_of_measurement: '°'
     state_class: measurement
     entity_category: diagnostic
+    web_server:
+      sorting_group_id: occupancy
+      sorting_weight: 150
   - platform: template
     name: "Target 2 Angle"
     id: target2_angle
@@ -991,6 +1045,9 @@ sensor:
     unit_of_measurement: '°'
     state_class: measurement
     entity_category: diagnostic
+    web_server:
+      sorting_group_id: occupancy
+      sorting_weight: 220
   - platform: template
     name: "Target 3 Angle"
     id: target3_angle
@@ -998,6 +1055,9 @@ sensor:
     unit_of_measurement: '°'
     state_class: measurement
     entity_category: diagnostic
+    web_server:
+      sorting_group_id: occupancy
+      sorting_weight: 290
   - platform: template
     name: "Target 1 Distance"
     id: target1_distance
@@ -1006,6 +1066,9 @@ sensor:
     state_class: measurement
     device_class: distance
     entity_category: diagnostic
+    web_server:
+      sorting_group_id: occupancy
+      sorting_weight: 160
   - platform: template
     name: "Target 2 Distance"
     id: target2_distance
@@ -1014,6 +1077,9 @@ sensor:
     state_class: measurement
     device_class: distance
     entity_category: diagnostic
+    web_server:
+      sorting_group_id: occupancy
+      sorting_weight: 230
   - platform: template
     name: "Target 3 Distance"
     id: target3_distance
@@ -1022,12 +1088,18 @@ sensor:
     state_class: measurement
     device_class: distance
     entity_category: diagnostic
+    web_server:
+      sorting_group_id: occupancy
+      sorting_weight: 300
   - platform: template
     name: "Zone 1 Target Count"
     id: zone1_target_count
     accuracy_decimals: 0
     unit_of_measurement: " "
     entity_category: diagnostic
+    web_server:
+      sorting_group_id: occupancy
+      sorting_weight: 50
   - platform: template
     name: "Zone 2 Target Count"
     id: zone2_target_count
@@ -1035,6 +1107,9 @@ sensor:
     disabled_by_default: true
     unit_of_measurement: " "
     entity_category: diagnostic
+    web_server:
+      sorting_group_id: occupancy
+      sorting_weight: 70
   - platform: template
     name: "Zone 3 Target Count"
     id: zone3_target_count
@@ -1042,6 +1117,9 @@ sensor:
     disabled_by_default: true
     unit_of_measurement: " "
     entity_category: diagnostic
+    web_server:
+      sorting_group_id: occupancy
+      sorting_weight: 90
   - platform: template
     name: "Zone 4 Target Count"
     id: zone4_target_count
@@ -1049,6 +1127,9 @@ sensor:
     disabled_by_default: true
     unit_of_measurement: " "
     entity_category: diagnostic
+    web_server:
+      sorting_group_id: occupancy
+      sorting_weight: 110
   - platform: template
     name: "Occupancy Mask 1 Target Count"
     id: occupancy_mask_1_target_count
@@ -1056,6 +1137,9 @@ sensor:
     disabled_by_default: true
     unit_of_measurement: " "
     entity_category: diagnostic
+    web_server:
+      sorting_group_id: occupancy
+      sorting_weight: 120
   - platform: template
     name: "Occupancy Mask 2 Target Count"
     id: occupancy_mask_2_target_count
@@ -1063,6 +1147,9 @@ sensor:
     disabled_by_default: true
     unit_of_measurement: " "
     entity_category: diagnostic
+    web_server:
+      sorting_group_id: occupancy
+      sorting_weight: 130
 
 select:
   - platform: template
