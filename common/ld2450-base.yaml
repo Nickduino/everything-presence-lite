@@ -231,7 +231,7 @@ switch:
     entity_category: config
     web_server:
       sorting_group_id: zones
-      sorting_weight: 
+      sorting_weight: 100
 
   - platform: template
     name: "Polygon Zones"
@@ -243,7 +243,7 @@ switch:
     disabled_by_default: false
     web_server:
       sorting_group_id: polygon_zones
-      sorting_weight: 
+      sorting_weight: 10
 
 binary_sensor:
   - platform: template
