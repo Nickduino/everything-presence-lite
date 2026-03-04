@@ -219,6 +219,9 @@ switch:
     optimistic: True
     entity_category: config
     icon: "mdi:rotate-180"
+    web_server:
+      sorting_group_id: configuration
+      sorting_weight: 30
 
   - platform: template
     name: "Entry Exit Enabled"
@@ -348,6 +351,9 @@ number:
     restore_value: True
     initial_value: 600
     entity_category: config
+    web_server:
+      sorting_group_id: configuration
+      sorting_weight: 10
   - platform: template
     name: "Installation Angle"
     id: installation_angle_ui
@@ -361,6 +367,9 @@ number:
     initial_value: 0
     icon: "mdi:angle-acute"
     entity_category: config
+    web_server:
+      sorting_group_id: configuration
+      sorting_weight: 20
 
   - platform: template
     name: "Exit Threshold Pct"
@@ -1202,6 +1211,9 @@ select:
       - Slow (0.4s)
       - Slower (0.5s)
     initial_option: Normal (0.3s)
+    web_server:
+      sorting_group_id: configuration
+      sorting_weight: 40
     on_value:
       then:
         - lambda: id(mmwave_update_interval) = (i + 1) * 100;
@@ -1219,6 +1231,9 @@ select:
       - Every 10 updates
       - Every 20 updates
     initial_option: Every update
+    web_server:
+      sorting_group_id: configuration
+      sorting_weight: 60
     on_value:
       then:
         - lambda: |-
@@ -1250,6 +1265,9 @@ select:
       - Above + Distance and Angle
       - Above + Speed and Resolution
     initial_option: Above + Speed and Resolution
+    web_server:
+      sorting_group_id: configuration
+      sorting_weight: 50
     on_value:
       then:
         - lambda: |-
