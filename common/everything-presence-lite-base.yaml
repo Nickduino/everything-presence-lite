@@ -136,6 +136,9 @@ sensor:
         - delta: 5
       - clamp:
           min_value: 0
+    web_server:
+      sorting_group_id: occupancy
+      sorting_weight: 5
 
 binary_sensor:
   - platform: gpio
@@ -245,7 +248,7 @@ web_server:
   version: 3
   sorting_groups:
     - id: occupancy_group
-      name: "Occupancy"
+      name: "Sensors"
       sorting_weight: 5
     - id: controls
       name: "Controls"
@@ -259,9 +262,6 @@ web_server:
     - id: polygon_zones
       name: "Polygon zones"
       sorting_weight: 40
-    - id: tuning              # cf https://docs.everythingsmart.io/s/products/doc/how-to-tune-your-epl-sensor-JGBteItQem
-      name: "Tuning"
-      sorting_weight: 50
 
     
 
