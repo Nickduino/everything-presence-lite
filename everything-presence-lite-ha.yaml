@@ -21,6 +21,10 @@ update:
     name: Everything Presence Lite Firmware
     source: https://Nickduino.github.io/everything-presence-lite/everything-presence-lite-ha-manifest.json
     disabled_by_default: true
+    web_server:
+      sorting_group_id: occupancy_group
+      sorting_weight: 360
+    
 
 dashboard_import:
   package_import_url: github://Nickduino/everything-presence-lite/everything-presence-lite-ha.yaml@main

@@ -174,7 +174,7 @@ button:
     entity_category: config
     web_server:
       sorting_group_id: controls
-      sorting_weight: 30
+      sorting_weight: 60
   - platform: template
     name: "Apply Update"
     entity_category: diagnostic
@@ -211,7 +211,7 @@ button:
           force_update: true
     web_server:
       sorting_group_id: controls
-      sorting_weight: 40
+      sorting_weight: 50
   - platform: factory_reset
     id: "factory_reset_button"
     internal: True
@@ -230,7 +230,7 @@ select:
     initial_option: "Disabled"
     web_server:
       sorting_group_id: controls
-      sorting_weight: 50
+      sorting_weight: 30
 
   - platform: template
     id: firmware_co2

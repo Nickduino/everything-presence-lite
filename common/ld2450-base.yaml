@@ -90,6 +90,9 @@ text_sensor:
     name: "mmWave Firmware"
     id: "firmware_version"
     entity_category: diagnostic
+    web_server:
+      sorting_group_id: occupancy_group
+      sorting_weight: 350
 
 button:
   - platform: template
@@ -131,7 +134,7 @@ button:
           data: [0xFD, 0xFC, 0xFB, 0xFA, 0x02, 0x00, 0xA3, 0x00, 0x04, 0x03, 0x02, 0x01]
     web_server:
       sorting_group_id: controls
-      sorting_weight: 40
+      sorting_weight: 70
   - platform: template
     name: "Factory Reset mmWave Sensor"
     id: factory_reset_mmwave_sensor
@@ -151,7 +154,7 @@ button:
       - button.press: reboot_mmwave_sensor
     web_server:
       sorting_group_id: controls
-      sorting_weight: 50
+      sorting_weight: 80
 
 switch:
   - platform: template
@@ -200,7 +203,7 @@ switch:
       - switch.turn_off: mmwave_configuration
     web_server:
       sorting_group_id: controls
-      sorting_weight: 60
+      sorting_weight: 40
 
   - platform: template
     name: "Stale Target Reset"
