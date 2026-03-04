@@ -118,7 +118,8 @@ number:
     on_value:
       - lambda: 'id(illuminance_sensor).update();'
     web_server:
-      sorting_weight: 10
+      sorting_group_id: configuration
+      sorting_weight: 70
 
 sensor:
   - platform: bh1750
