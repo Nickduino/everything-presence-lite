@@ -243,6 +243,9 @@ select:
       - "Disabled"
       - "Enabled"
     initial_option: "Disabled"
+    web_server:
+      sorting_group_id: configuration
+      sorting_weight: 80
 
 web_server:
   version: 3
