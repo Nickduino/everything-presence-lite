@@ -137,7 +137,7 @@ sensor:
       - clamp:
           min_value: 0
     web_server:
-      sorting_group_id: occupancy
+      sorting_group_id: occupancy_group
       sorting_weight: 5
 
 binary_sensor:
