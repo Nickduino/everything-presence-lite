@@ -179,6 +179,7 @@ switch:
     id: bluetooth_switch
     optimistic: true
     disabled_by_default: True
+    restore_mode: RESTORE_DEFAULT_OFF
     entity_category: config
     turn_on_action:
       - switch.turn_on: mmwave_configuration
