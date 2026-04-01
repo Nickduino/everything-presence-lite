@@ -22,10 +22,10 @@ esphome:
             id(firmware_co2).publish_state("Disabled");
           }
 
-esp32:
-  board: esp32dev
-  framework:
-    type: esp-idf
+# esp32:
+#   board: esp32dev
+#   framework:
+#     type: esp-idf
 
 # Enable logging
 logger:
