@@ -4,7 +4,7 @@ esphome:
   friendly_name: ${friendly_name}
   name_add_mac_suffix: True
   project: 
-    name: EverythingSmartTechnology.Presence Lite +
+    name: EverythingSmartTechnology.Presence Lite Plus
     version: "1.4.2"
   on_boot:
     priority: -100
