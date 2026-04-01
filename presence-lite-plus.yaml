@@ -1,0 +1,57 @@
+substitutions:
+#  name: "everything-presence-lite"
+#  friendly_name: "Everything Presence Lite"
+  illuminance_update_interval: "2s"
+  hidden_ssid: "false"
+  log_level: DEBUG
+
+
+  device_config:
+    ethernet_enabled: false
+    co2_enabled: false
+    bluetooth_enabled: true
+    board_revision: "1.2"
+    sensor_variant: "ld2450"
+#    second_sensor_variant: "ld2410B"
+    firmware_channel: "stable"
+    model: "everything-presence-lite"
+
+update:
+  - platform: http_request
+    id: update_http_request
+    name: Everything Presence Lite Firmware
+    source: https://Nickduino.github.io/everything-presence-lite/everything-presence-lite-ha-manifest.json
+    disabled_by_default: true
+    web_server:
+      sorting_group_id: occupancy_group
+      sorting_weight: 360
+    
+
+dashboard_import:
+  package_import_url: github://Nickduino/everything-presence-lite/presence-lite-plus.yaml@presence-lite-plus
+  import_full_config: false # or true
+
+packages:
+  device_base:
+    url: https://github.com/Nickduino/everything-presence-lite
+    file: common/everything-presence-lite-base.yaml
+    ref: presence-lite-plus
+    refresh: 0s
+
+  ld2450_base:
+    url: https://github.com/Nickduino/everything-presence-lite
+    file: common/ld2450-base.yaml
+    ref: presence-lite-plus
+    refresh: 0s
+
+  # ld2410_base:
+  #   url: https://github.com/Nickduino/everything-presence-lite
+  #   file: common/ld2410-base.yaml
+  #   ref: presence-lite-plus
+  #   refresh: 0s
+
+  bluetooth_base:
+    url: https://github.com/Nickduino/everything-presence-lite
+    file: common/bluetooth-base.yaml
+    ref: presence-lite-plus
+    refresh: 0s
