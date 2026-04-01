@@ -1,5 +1,5 @@
 esphome:
-  name: ${name}
+  # name: ${name}
   comment: Comment Presence Lite +
   # friendly_name: ${friendly_name}
   name_add_mac_suffix: True
