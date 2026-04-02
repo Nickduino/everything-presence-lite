@@ -2,7 +2,7 @@
  #   illuminance_bh1750_update_interval: "5s"
   
 esphome:
-  # name: ${name}
+  name: ${name}
   # comment: Presence Lite +
   # friendly_name: ${friendly_name}
   name_add_mac_suffix: False
