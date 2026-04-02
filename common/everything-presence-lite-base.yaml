@@ -55,7 +55,7 @@ api:
               root["bluetooth_enabled"] = ${ device_config.bluetooth_enabled | lower };
               root["board_revision"]    = "${ device_config.board_revision }";
               root["sensor_variant"]    = "${ device_config.sensor_variant }";
-/*              root["second_sensor_variant"]    = "${ device_config.second_sensor_variant }"; */
+#              root["second_sensor_variant"]    = "${ device_config.second_sensor_variant }";
               root["firmware_channel"]  = "${ device_config.firmware_channel }";
               root["model"]             = "${ device_config.model }";
 
