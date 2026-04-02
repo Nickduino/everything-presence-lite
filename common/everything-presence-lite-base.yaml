@@ -1,5 +1,5 @@
-# substitutions:
-#   illuminance_bh1750_update_interval: "5s"
+ # substitutions:
+ #   illuminance_bh1750_update_interval: "5s"
   
 esphome:
   # name: ${name}
