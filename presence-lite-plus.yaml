@@ -1,5 +1,5 @@
 substitutions:
-  illuminance_bh1750_update_interval: "5s"
+  illuminance_bh1750_update_interval: 5s
 #  name: "plp-001"
 #  friendly_name: "Everything Presence Lite"
 #  illuminance_LD2410_update_interval: "5s"
