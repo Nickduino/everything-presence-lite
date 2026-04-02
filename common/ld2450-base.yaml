@@ -142,11 +142,11 @@ button:
       - lambda: |-
           uint8_t response[20];
           if (id(LD2450_uart).read_array(response, 20)) {
-            int _major = response[13];
-            int _minor = response[12];
-            char LD2450_firmware_str[32];
+            int LD2450_firmware_major = response[13];
+            int LD2450_firmware_minor = response[12];
+            char LD2450_firmware_version_str[32];
             sprintf(LD2450_firmware_str, "V%d.%02d", LD2450_firmware_major, LD2450_firmware_minor);
-            id(LD2450_firmware).publish_state(std::string(LD2450_firmware_str));
+            id(LD2450_firmware).publish_state(std::string(LD2450_firmware_version_str));
           } else {
             id(LD2450_firmware).publish_state("Unknown");
           }
