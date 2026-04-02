@@ -130,7 +130,7 @@ sensor:
     id: illuminance_bh1750
     i2c_id: bus_a
     address: 0x23
-    update_interval: ${illuminance_bh1750_update_interval}
+    update_interval: ${illuminance_update_interval}
     accuracy_decimals: 0
     filters:
       - lambda: "return x + id(illuminance_bh1750_offset_ui).state;"
