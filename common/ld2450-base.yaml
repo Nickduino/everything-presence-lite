@@ -145,7 +145,7 @@ button:
             int LD2450_firmware_major = response[13];
             int LD2450_firmware_minor = response[12];
             char LD2450_firmware_version_str[32];
-            sprintf(LD2450_firmware_str, "V%d.%02d", LD2450_firmware_major, LD2450_firmware_minor);
+            sprintf(LD2450_firmware_version_str, "V%d.%02d", LD2450_firmware_major, LD2450_firmware_minor);
             id(LD2450_firmware).publish_state(std::string(LD2450_firmware_version_str));
           } else {
             id(LD2450_firmware).publish_state("Unknown");
