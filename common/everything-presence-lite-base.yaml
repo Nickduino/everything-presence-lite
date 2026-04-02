@@ -103,8 +103,8 @@ light:
 
 number:
   - platform: template
-    name: "Illuminance Offset"
-    id: illuminance_offset_ui
+    name: "Illuminance BH1750 Offset"
+    id: illuminance_bh1750_offset_ui
     unit_of_measurement: "lx"
     min_value: -100
     max_value: 100
@@ -125,13 +125,13 @@ number:
 sensor:
   - platform: bh1750
     name: Illuminance BH1750
-    id: illuminance_bh1750_bh1750
+    id: illuminance_bh1750
     i2c_id: bus_a
     address: 0x23
-    update_interval: ${illuminance_update_interval}
+    update_interval: ${illuminance_bh1750_update_interval}
     accuracy_decimals: 0
     filters:
-      - lambda: "return x + id(illuminance_offset_ui).state;"
+      - lambda: "return x + id(illuminance_bh1750_offset_ui).state;"
       - or:
         - delta: 5%
         - delta: 5
