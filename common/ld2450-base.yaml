@@ -1,104 +1,104 @@
 esphome:
-  on_boot: 
+  on_boot:    # On boot, check mmWave firmware ant set all occupancy sensors to false (-> no ghost occupancy)
     priority: -100
     then:
-      - button.press: get_mmwave_firmware
+      - button.press: get_LD2450_firmware
       - binary_sensor.template.publish:
           id: zone1_occupancy
-          state: false 
+          state: false
       - binary_sensor.template.publish:
           id: zone2_occupancy
-          state: false 
+          state: false
       - binary_sensor.template.publish:
           id: zone3_occupancy
-          state: false 
+          state: false
       - binary_sensor.template.publish:
           id: zone4_occupancy
           state: false
 globals:
   - id: mmwave_update_time
     type: unsigned long
-    restore_value: False
+    restore_value: false
     initial_value: '0'
   - id: mmwave_update_interval
     type: unsigned long
-    restore_value: False
+    restore_value: false
     initial_value: '250'
   - id: target1_last_update
     type: unsigned long
     initial_value: '0'
-    restore_value: False
+    restore_value: false
   - id: target1_reset
     type: int
     initial_value: "1"
-    restore_value: False
+    restore_value: false
   - id: entities_update_count
     type: unsigned int
-    restore_value: False
+    restore_value: false
     initial_value: '0'
   - id: entities_update_max_count
     type: unsigned int
-    restore_value: False
+    restore_value: false
     initial_value: '0'
   - id: extra_entities
     type: unsigned int
-    restore_value: False
+    restore_value: false
     initial_value: '0'
   - id: assumed_present_until_ms
     type: unsigned long
-    restore_value: False
+    restore_value: false
     initial_value: '0'
   - id: assumed_present_active
     type: bool
-    restore_value: False
+    restore_value: false
     initial_value: 'false'
   - id: last_zone_hold
     type: int
-    restore_value: False
+    restore_value: false
     initial_value: '0'
   - id: last_target_x_mm
     type: float
-    restore_value: False
+    restore_value: false
     initial_value: '0'
   - id: last_target_y_mm
     type: float
-    restore_value: False
+    restore_value: false
     initial_value: '0'
   - id: poly_zone_1_points
     type: std::vector<float>
-    restore_value: False
+    restore_value: false
     initial_value: 'std::vector<float>()'
   - id: poly_zone_2_points
     type: std::vector<float>
-    restore_value: False
+    restore_value: false
     initial_value: 'std::vector<float>()'
   - id: poly_zone_3_points
     type: std::vector<float>
-    restore_value: False
+    restore_value: false
     initial_value: 'std::vector<float>()'
   - id: poly_zone_4_points
     type: std::vector<float>
-    restore_value: False
+    restore_value: false
     initial_value: 'std::vector<float>()'
   - id: poly_exclusion_1_points
     type: std::vector<float>
-    restore_value: False
+    restore_value: false
     initial_value: 'std::vector<float>()'
   - id: poly_exclusion_2_points
     type: std::vector<float>
-    restore_value: False
+    restore_value: false
     initial_value: 'std::vector<float>()'
   - id: poly_entry_1_points
     type: std::vector<float>
-    restore_value: False
+    restore_value: false
     initial_value: 'std::vector<float>()'
   - id: poly_entry_2_points
     type: std::vector<float>
-    restore_value: False
+    restore_value: false
     initial_value: 'std::vector<float>()'
 
 
-interval:
+interval: # Stale target reboot. Every 1s, it check it the timeout (default 30s) has elapsed and reboots the mmWave sensor
   - interval: 1s
     then:
       - lambda: |-
@@ -119,8 +119,8 @@ interval:
 text_sensor:
   - platform: template
     disabled_by_default: True
-    name: "mmWave Firmware"
-    id: "firmware_version"
+    name: "LD2450 Firmware"
+    id: "LD2450_firmware"
     entity_category: diagnostic
     web_server:
       sorting_group_id: occupancy_group
@@ -128,20 +128,20 @@ text_sensor:
 
 button:
   - platform: template
-    id: get_mmwave_firmware
+    id: get_LD2450_firmware
     internal: True
     entity_category: config
     disabled_by_default: True
     on_press: 
       then:
-      - switch.turn_on: mmwave_configuration
+      - switch.turn_on: LD2450_configuration
       - delay: 1s
       - uart.write:
-          id: uart_bus
+          id: LD2450_uart
           data: [0xFD, 0xFC, 0xFB, 0xFA, 0x02, 0x00, 0xA0, 0x00, 0x04, 0x03, 0x02, 0x01]
       - lambda: |-
           uint8_t response[20];
-          if (id(uart_bus).read_array(response, 20)) {
+          if (id(LD2450_uart).read_array(response, 20)) {
             int firmware_major = response[13];
             int firmware_minor = response[12];
             char firmware_version_str[32];
@@ -150,7 +150,7 @@ button:
           } else {
             id(firmware_version).publish_state("Unknown");
           }
-      - switch.turn_off: mmwave_configuration
+      - switch.turn_off: LD2450_configuration
       - delay: 1s
   - platform: template
     name: "Reboot mmWave Sensor"
@@ -159,10 +159,10 @@ button:
     entity_category: config
     on_press:
       then:
-      - switch.turn_on: mmwave_configuration
+      - switch.turn_on: LD2450_configuration
       - delay: 1s  
       - uart.write:
-          id: uart_bus
+          id: LD2450_uart
           data: [0xFD, 0xFC, 0xFB, 0xFA, 0x02, 0x00, 0xA3, 0x00, 0x04, 0x03, 0x02, 0x01]
     web_server:
       sorting_group_id: controls
@@ -175,13 +175,13 @@ button:
     on_press:
       then:
       - logger.log: "Performing Factory Reset"
-      - switch.turn_on: mmwave_configuration
+      - switch.turn_on: LD2450_configuration
       - delay: 2s
       - uart.write:
-          id: uart_bus
+          id: LD2450_uart
           data: [0xFD, 0xFC, 0xFB, 0xFA, 0x02, 0x00, 0xA2, 0x00, 0x04, 0x03, 0x02, 0x01]
       - delay: 2s
-      - switch.turn_off: mmwave_configuration
+      - switch.turn_off: LD2450_configuration
       - delay: 2s
       - button.press: reboot_mmwave_sensor
     web_server:
@@ -191,7 +191,7 @@ button:
 switch:
   - platform: template
     name: "mmWave Configuration Mode"
-    id: mmwave_configuration
+    id: LD2450_configuration
     disabled_by_default: True
     internal: True
     entity_category: config
@@ -199,11 +199,11 @@ switch:
     restore_mode: DISABLED
     turn_on_action:
       - uart.write:
-          id: uart_bus
+          id: LD2450_uart
           data: [0xFD, 0xFC, 0xFB, 0xFA, 0x04, 0x00, 0xFF, 0x00, 0x01, 0x00, 0x04, 0x03, 0x02, 0x01]
     turn_off_action:
       - uart.write:
-          id: uart_bus
+          id: LD2450_uart
           data: [0xFD, 0xFC, 0xFB, 0xFA, 0x02, 0x00, 0xFE, 0x00, 0x04, 0x03, 0x02, 0x01]
 
   - platform: template
@@ -214,26 +214,26 @@ switch:
     restore_mode: RESTORE_DEFAULT_OFF
     entity_category: config
     turn_on_action:
-      - switch.turn_on: mmwave_configuration
+      - switch.turn_on: LD2450_configuration
       - delay: 2s
       - uart.write:
-          id: uart_bus
+          id: LD2450_uart
           data: [0xFD, 0xFC, 0xFB, 0xFA, 0x04, 0x00, 0xA4, 0x00, 0x01, 0x00, 0x04, 0x03, 0x02, 0x01]  # Turn on Bluetooth
       - delay: 2s
       - button.press: reboot_mmwave_sensor  # Reboot after enabling Bluetooth
       - delay: 2s
-      - switch.turn_off: mmwave_configuration
+      - switch.turn_off: LD2450_configuration
 
     turn_off_action:
-      - switch.turn_on: mmwave_configuration
+      - switch.turn_on: LD2450_configuration
       - delay: 2s
       - uart.write:
-          id: uart_bus
+          id: LD2450_uart
           data: [0xFD, 0xFC, 0xFB, 0xFA, 0x04, 0x00, 0xA4, 0x00, 0x00, 0x00, 0x04, 0x03, 0x02, 0x01]  # Turn off Bluetooth
       - delay: 2s
       - button.press: reboot_mmwave_sensor  # Reboot after enabling Bluetooth
       - delay: 2s
-      - switch.turn_off: mmwave_configuration
+      - switch.turn_off: LD2450_configuration
     web_server:
       sorting_group_id: controls
       sorting_weight: 40
@@ -1610,7 +1610,7 @@ text:
       sorting_weight: 70
 
 uart:
-  id: uart_bus
+  id: LD2450_uart
   tx_pin: 
     number: GPIO17
     mode:
