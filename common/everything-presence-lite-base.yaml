@@ -55,6 +55,7 @@ api:
               root["bluetooth_enabled"] = ${ device_config.bluetooth_enabled | lower };
               root["board_revision"]    = "${ device_config.board_revision }";
               root["sensor_variant"]    = "${ device_config.sensor_variant }";
+#             root["second_sensor_variant"]    = "${ device_config.second_sensor_variant }";
               root["firmware_channel"]  = "${ device_config.firmware_channel }";
               root["model"]             = "${ device_config.model }";
 
@@ -70,7 +71,7 @@ wifi:
 
 improv_serial:
 
-i2c:
+i2c: # For the light sensor?
 -  id: bus_a
    sda: 8
    scl: 9
@@ -123,8 +124,8 @@ number:
 
 sensor:
   - platform: bh1750
-    name: Illuminance
-    id: illuminance_sensor
+    name: Illuminance BH1750
+    id: illuminance_sensor_bh1750
     i2c_id: bus_a
     address: 0x23
     update_interval: ${illuminance_update_interval}
@@ -140,7 +141,7 @@ sensor:
       sorting_group_id: occupancy_group
       sorting_weight: 5
 
-binary_sensor:
+binary_sensor: # Reset button: we could do without
   - platform: gpio
     pin:
       number: 0
@@ -175,7 +176,7 @@ button:
     web_server:
       sorting_group_id: controls
       sorting_weight: 60
-  - platform: template
+  - platform: template # Update taking into account different sensors: we might do without it as well?
     name: "Apply Update"
     entity_category: diagnostic
     on_press:
