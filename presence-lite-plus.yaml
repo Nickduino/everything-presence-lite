@@ -1,7 +1,7 @@
 substitutions:
 #  name: "everything-presence-lite"
 #  friendly_name: "Everything Presence Lite"
-  illuminance_update_interval: "2s"
+  illuminance_update_interval: "5s"
   hidden_ssid: "false"
   log_level: DEBUG
 
@@ -14,7 +14,7 @@ substitutions:
     sensor_variant: "ld2450"
 #    second_sensor_variant: "ld2410B"
     firmware_channel: "stable"
-    model: "everything-presence-lite"
+    model: "presence-lite-plus"
 
 update:
   - platform: http_request
