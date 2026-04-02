@@ -30,7 +30,7 @@ update:
 
 dashboard_import:
   package_import_url: github://Nickduino/everything-presence-lite/presence-lite-plus.yaml@presence-lite-plus
-  import_full_config: false # or true
+  import_full_config: true # or false
 
 packages:
   device_base:
