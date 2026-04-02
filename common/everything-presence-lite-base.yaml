@@ -5,7 +5,7 @@ esphome:
   # name: ${name}
   # comment: Presence Lite +
   # friendly_name: ${friendly_name}
-  # name_add_mac_suffix: True
+   name_add_mac_suffix: False
   project: 
     name: EverythingSmartTechnology.Presence Lite Plus
     version: "1.4.2"
