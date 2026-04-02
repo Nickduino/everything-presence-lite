@@ -142,13 +142,13 @@ button:
       - lambda: |-
           uint8_t response[20];
           if (id(LD2450_uart).read_array(response, 20)) {
-            int firmware_major = response[13];
-            int firmware_minor = response[12];
-            char firmware_version_str[32];
-            sprintf(firmware_version_str, "V%d.%02d", firmware_major, firmware_minor);
-            id(firmware_version).publish_state(std::string(firmware_version_str));
+            int LD2450_firmware_major = response[13];
+            int LD2450_firmware_minor = response[12];
+            char LD2450_firmware_version_str[32];
+            sprintf(LD2450_firmware_version_str, "V%d.%02d", LD2450_firmware_major, LD2450_firmware_minor);
+            id(LD2450_firmware_version).publish_state(std::string(LD2450_firmware_version_str));
           } else {
-            id(firmware_version).publish_state("Unknown");
+            id(LD2450_firmware_version).publish_state("Unknown");
           }
       - switch.turn_off: LD2450_configuration
       - delay: 1s
