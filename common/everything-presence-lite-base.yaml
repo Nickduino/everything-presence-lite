@@ -117,7 +117,7 @@ number:
     icon: "mdi:brightness-5"
     entity_category: config
     on_value:
-      - lambda: 'id(illuminance_sensor).update();'
+      - lambda: 'id(illuminance_bh1750).update();'
     web_server:
       sorting_group_id: configuration
       sorting_weight: 70
@@ -125,7 +125,7 @@ number:
 sensor:
   - platform: bh1750
     name: Illuminance BH1750
-    id: illuminance_sensor_bh1750
+    id: illuminance_bh1750_bh1750
     i2c_id: bus_a
     address: 0x23
     update_interval: ${illuminance_update_interval}
