@@ -18,6 +18,9 @@ binary_sensor:
   - platform: ld2410
     has_target:
       name: LD2410 Occupancy
+      web_server:
+        sorting_group_id: occupancy_group
+        sorting_weight: 10
     has_moving_target:
       name: LD2410 Moving Target
       entity_category: diagnostic
