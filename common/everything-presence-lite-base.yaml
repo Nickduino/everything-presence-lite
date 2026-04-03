@@ -46,13 +46,14 @@ api:
       then:
         - api.respond:
             data: !lambda |-
-              root["ethernet_enabled"]  = ${ device_config.ethernet_enabled | lower };
-              root["co2_enabled"]       = ${ device_config.co2_enabled | lower };
-              root["bluetooth_enabled"] = ${ device_config.bluetooth_enabled | lower };
-              root["board_revision"]    = "${ device_config.board_revision }";
-              root["sensor_variant"]    = "${ device_config.sensor_variant }";
-              root["firmware_channel"]  = "${ device_config.firmware_channel }";
-              root["model"]             = "${ device_config.model }";
+              root["ethernet_enabled"]          = ${ device_config.ethernet_enabled | lower };
+              root["co2_enabled"]               = ${ device_config.co2_enabled | lower };
+              root["bluetooth_enabled"]         = ${ device_config.bluetooth_enabled | lower };
+              root["board_revision"]            = "${ device_config.board_revision }";
+              root["sensor_variant"]            = "${ device_config.sensor_variant }"; 
+              root["second_sensor_variant"]     = "${ device_config.second_sensor_variant }"; # Trying to activate LD2410
+              root["firmware_channel"]          = "${ device_config.firmware_channel }";
+              root["model"]                     = "${ device_config.model }";
 
 ota:
   - platform: esphome
@@ -171,7 +172,7 @@ button:
     web_server:
       sorting_group_id: controls
       sorting_weight: 60
-  - platform: template # Update taking into account different sensors: we might do without it as well?
+  - platform: template    # Update taking into account different sensors: we might do without it as well?
     name: "Apply Update"
     entity_category: diagnostic
     on_press:
