@@ -98,7 +98,7 @@ globals:
     initial_value: 'std::vector<float>()'
 
 
-interval: # Stale target reboot. Every 1s, it check it the timeout (default 30s) has elapsed and reboots the mmWave sensor
+interval: # Stale target reboot. Every 1s, it check it the timeout (default 30s) has elapsed and reboots the mmWave 
   - interval: 1s
     then:
       - lambda: |-
@@ -390,7 +390,7 @@ number:
     web_server:
       sorting_group_id: configuration
       sorting_weight: 10
-  - platform: template # <- It should be the same for both sensors
+  - platform: template # <- It should be the same for both sensors (but maybe the LD2410 doesn't care?)
     name: "Installation Angle"
     id: installation_angle_ui
     unit_of_measurement: "º"
