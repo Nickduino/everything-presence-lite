@@ -17,39 +17,39 @@ ld2410:
 binary_sensor:
   - platform: ld2410
     has_target:
-      name: Occupancy
+      name: LD2410 Occupancy
     has_moving_target:
-      name: Moving Target
+      name: LD2410 Moving Target
       entity_category: diagnostic
     has_still_target:
-      name: Still Target
+      name: LD2410 Still Target
       entity_category: diagnostic
   - platform: gpio
-    pin: 18
-    name: Occupancy GPIO
+    pin: 7
+    name: LD2410 Occupancy GPIO
     device_class: Occupancy
     entity_category: diagnostic
 
 sensor:
   - platform: ld2410
     light:
-      name: mmWave Light
+      name: LD2410 Illuminance
       disabled_by_default: true
       entity_category: diagnostic
     moving_distance:
-      name: Moving Target Distance
+      name: LD2410 Moving Target Distance
       entity_category: diagnostic
     still_distance:
-      name: Still Target Distance
+      name: LD2410 Still Target Distance
       entity_category: diagnostic
     moving_energy:
-      name: Moveing Target Energy
+      name: LD2410 Moving Target Energy
       entity_category: diagnostic
     still_energy:
-      name: Still Target Energy
+      name: LD2410 Still Target Energy
       entity_category: diagnostic
     detection_distance:
-      name: Detection Distance
+      name: LD2410 Detection Distance
       entity_category: diagnostic
     g0:
       move_energy:
@@ -118,36 +118,44 @@ sensor:
 switch:
   - platform: ld2410
     engineering_mode:
-      name: "Engineering Mode"
-      id: "engineering_mode"
+      name: "LD2410 Engineering Mode"
+      id: "ld2410_engineering_mode"
       entity_category: config
     bluetooth:
-      name: "mmWave Bluetooth"
+      name: "LD2410 Bluetooth"
       disabled_by_default: true
       entity_category: config
 
 number:
   - platform: ld2410
     timeout:
-      name: Occupancy Off Delay
+      name: LD2410 Occupancy Off Delay
       entity_category: config
     light_threshold:
-      name: mmWave Light Threshold
+      name: LD2410 Light Threshold
       disabled_by_default: True
       entity_category: config
     max_move_distance_gate:
-      name: Max Movement Distance Gate
+      name: LD2410 Max Movement Distance Gate
       entity_category: config
     max_still_distance_gate:
-      name: Max Still Distance Gate
+      name: LD2410 Max Still Distance Gate
       entity_category: config
     g0:
       move_threshold:
         name: Gate 0 Movement Sensitivity
         entity_category: config
+        # min_value: 0
+        # max_value: 100
+        # step: 1
+        # mode: box
       still_threshold:
         name: Gate 0 Still Sensitivity
         entity_category: config
+        # min_value: 0
+        # max_value: 100
+        # step: 1
+        # mode: box
     g1:
       move_threshold:
         name: Gate 1 Movement Sensitivity
@@ -208,11 +216,13 @@ number:
 button:
   - platform: ld2410
     factory_reset:
-      name: "Factory Reset mmWave"
+      name: "LD2410 Factory Reset"
+      id: ld2410_factory_reset
       disabled_by_default: true
       entity_category: config
     restart:
-      name: "Restart mmWave"
+      name: "LD2410 Restart"
+      id: ld2410_restart
       disabled_by_default: true
       entity_category: config
     query_params:
@@ -223,28 +233,28 @@ button:
 text_sensor:
   - platform: ld2410
     version:
-      name: "mmWave Firmware Version"
+      name: "LD2410 Firmware Version"
       entity_category: diagnostic
     mac_address:
-      name: "mmWave MAC Address"
+      name: "LD2410 MAC Address"
       disabled_by_default: true
       entity_category: diagnostic
 
 select:
   - platform: ld2410
     distance_resolution:
-      name: "Distance Gate Resolution"
+      name: "LD2410 Distance Gate Resolution"
       disabled_by_default: true
       entity_category: config
     baud_rate:
-      name: "mmWave Sensor Baud Rate"
+      name: "LD2410 Baud Rate"
       disabled_by_default: true
       entity_category: config
     light_function:
-      name: mmWave Light Function
+      name: LD2410 Light Function
       disabled_by_default: true
       entity_category: config
     out_pin_level:
-      name: GPIO Pin Level
+      name: LD2410 GPIO Pin Level
       disabled_by_default: true
       entity_category: config
