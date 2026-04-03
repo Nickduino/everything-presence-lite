@@ -4,14 +4,15 @@ esphome:
       - switch.turn_on: engineering_mode
 
 uart:
-  id: uart_bus
+  id: LD2410_uart
   baud_rate:  256000
-  rx_pin: 16
-  tx_pin: 17
+  rx_pin: 18
+  tx_pin: 21
   parity: NONE
   stop_bits: 1
 
 ld2410:
+  uart_id: LD2410_uart
 
 binary_sensor:
   - platform: ld2410
