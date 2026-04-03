@@ -123,7 +123,7 @@ text_sensor:
     id: "LD2450_firmware"
     entity_category: diagnostic
     web_server:
-      sorting_group_id: occupancy_group
+      sorting_group_id: _group
       sorting_weight: 350
 
 button:
@@ -284,7 +284,7 @@ switch:
 binary_sensor:
   - platform: template
     name: "LD2450 Occupancy"
-    device_class: occupancy
+    device_class: 
     id: ld2450_occupancy
     filters:
       - delayed_off: !lambda return (id(ld2450_off_delay).state * 1000);
@@ -2355,7 +2355,7 @@ uart:
               occ_now = true;
             }
           }
-          id(occupancy).publish_state(occ_now);
+          id(ld2450_occupancy).publish_state(occ_now);
           bool hold_active = (ld2450_assumed_present_until != 0 && millis() < ld2450_assumed_present_until);
           id(ld2450_ld2450_assumed_present_active) = hold_active;
           id(ld2450_ld2450_assumed_present_until_ms) = ld2450_assumed_present_until;
