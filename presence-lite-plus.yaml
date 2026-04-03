@@ -39,11 +39,11 @@ packages:
     ref: presence-lite-plus
     refresh: 0s
 
-  # ld2450_base:
-  #   url: https://github.com/Nickduino/everything-presence-lite
-  #   file: common/ld2450-base.yaml
-  #   ref: presence-lite-plus
-  #   refresh: 0s
+  ld2450_base:
+    url: https://github.com/Nickduino/everything-presence-lite
+    file: common/ld2450-base.yaml
+    ref: presence-lite-plus
+    refresh: 0s
 
   ld2410_base:
     url: https://github.com/Nickduino/everything-presence-lite
