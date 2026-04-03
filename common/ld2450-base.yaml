@@ -123,7 +123,7 @@ text_sensor:
     id: "LD2450_firmware"
     entity_category: diagnostic
     web_server:
-      sorting_group_id: _group
+      sorting_group_id: occupancy_group
       sorting_weight: 350
 
 button:
