@@ -38,8 +38,8 @@ sensor:
     light:
       name: LD2410 Illuminance
       device_class: illuminance
-      entity_category: sensors
-      disabled_by_default: false
+      entity_category: "" # I want to see that in the sensors and not in the diag where it is currently
+#      disabled_by_default: false
       web_server:
         sorting_group_id: occupancy_group
         sorting_weight: 6
