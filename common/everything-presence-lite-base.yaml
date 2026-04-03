@@ -1,13 +1,9 @@
 esphome:
-#  name: ${name}
-  # comment: Presence Lite +
-  # friendly_name: ${friendly_name}
-  name_add_mac_suffix: False
   project: 
     name: EverythingSmartTechnology.Presence Lite Plus
     version: "1.4.2"
   on_boot:
-    priority: -100
+    priority: -100 # We could probably remove this as well
     then:
       - lambda: |-
           if (std::string("${ device_config.bluetooth_enabled | lower }") == "true") {
@@ -28,8 +24,8 @@ esphome:
 #     type: esp-idf
 
 # Enable logging
-logger:
-  level: ${log_level}
+# logger:
+#   level: ${log_level}
 
 # Enable Home Assistant API
 api:
