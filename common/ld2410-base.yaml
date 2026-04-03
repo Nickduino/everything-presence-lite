@@ -145,16 +145,16 @@ number:
       move_threshold:
         name: Gate 0 Movement Sensitivity
         entity_category: config
-        min_value: 0
-        max_value: 100
-        step: 1
+        # min_value: 0
+        # max_value: 100
+        # step: 1
         mode: box
       still_threshold:
         name: Gate 0 Still Sensitivity
         entity_category: config
-        min_value: 0
-        max_value: 100
-        step: 1
+        # min_value: 0
+        # max_value: 100
+        # step: 1
         mode: box
     g1:
       move_threshold:
