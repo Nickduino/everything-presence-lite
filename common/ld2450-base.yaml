@@ -1608,6 +1608,7 @@ text:
     web_server:
       sorting_group_id: polygon_zones
       sorting_weight: 70
+
 uart:
   id: LD2450_uart
   tx_pin: GPIO17
