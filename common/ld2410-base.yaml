@@ -34,8 +34,10 @@ sensor:
   - platform: ld2410
     light:
       name: LD2410 Illuminance
-      disabled_by_default: true
-      entity_category: diagnostic
+      disabled_by_default: false
+      web_server:
+      sorting_group_id: occupancy_group
+      sorting_weight: 6
     moving_distance:
       name: LD2410 Moving Target Distance
       entity_category: diagnostic
