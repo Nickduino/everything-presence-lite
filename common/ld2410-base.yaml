@@ -34,6 +34,7 @@ sensor:
   - platform: ld2410
     light:
       name: LD2410 Illuminance
+      device_class: illuminance
       disabled_by_default: false
       web_server:
         sorting_group_id: occupancy_group
