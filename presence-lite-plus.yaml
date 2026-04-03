@@ -13,7 +13,7 @@ substitutions:
     bluetooth_enabled: true
     board_revision: "1.2"
     sensor_variant: "ld2450"
-    second_sensor_variant: "ld2410"
+#    second_sensor_variant: "ld2410"
     firmware_channel: "stable"
     model: "presence-lite-plus"
 
@@ -45,11 +45,11 @@ packages:
     ref: presence-lite-plus
     refresh: 0s
 
-  ld2410_base:
-    url: https://github.com/Nickduino/everything-presence-lite
-    file: common/ld2410-base.yaml
-    ref: presence-lite-plus
-    refresh: 0s
+  # ld2410_base:
+  #   url: https://github.com/Nickduino/everything-presence-lite
+  #   file: common/ld2410-base.yaml
+  #   ref: presence-lite-plus
+  #   refresh: 0s
 
   bluetooth_base:
     url: https://github.com/Nickduino/everything-presence-lite
