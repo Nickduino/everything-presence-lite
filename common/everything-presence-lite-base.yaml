@@ -121,7 +121,7 @@ number:
 
 sensor:
   - platform: bh1750
-    name: Illuminance BH1750
+    name: BH1750 Illuminance
     id: illuminance_bh1750
     i2c_id: bus_a
     address: 0x23
