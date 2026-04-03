@@ -4,7 +4,7 @@ substitutions:
 #  illuminance_LD2410_update_interval: "5s"
   illuminance_bh1750_update_interval: "5s"
   hidden_ssid: "false"
-  log_level: DEBUG
+# log_level: DEBUG
 
 
   device_config:
