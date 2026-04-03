@@ -1,7 +1,7 @@
 esphome:
   on_boot:
     then:
-      - switch.turn_on: engineering_mode
+      - switch.turn_on: ld2410_engineering_mode
 
 uart:
   id: LD2410_uart
