@@ -1656,7 +1656,7 @@ uart:
           const static float DEGREES_TO_RADIANS = 3.14159265358979323846 / 180.0;
           const static int16_t MIN_INT16_VAL = -32768;
 
-          float max_ld2450_distance = float(id(ld2450_distance).state) * 10;
+          float ld2450_max_distance = float(id(ld2450_distance).state) * 10;
           float installation_angle = id(installation_angle_ui).state * DEGREES_TO_RADIANS;
 
           static unsigned long ld2450_assumed_present_until = 0;
@@ -1736,7 +1736,7 @@ uart:
               p1_x = -p1_x;
             }
             
-            if (p1_distance > max_distance) {
+            if (p1_distance > ld2450_max_distance) {
               p1_detected = false;
             } else {
               float p1_angle;
@@ -1908,7 +1908,7 @@ uart:
               p2_x = -p2_x;
             }
             
-            if (p2_distance > max_distance) {
+            if (p2_distance > ld2450_max_distance) {
               p2_detected = false;
             } else {
               float p2_angle;
@@ -2067,7 +2067,7 @@ uart:
               p3_x = -p3_x;
             }
             
-            if (p3_distance > max_distance) {
+            if (p3_distance > ld2450_max_distance) {
               p3_detected = false;
             } else {
               float p3_angle;
