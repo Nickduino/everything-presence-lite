@@ -284,7 +284,7 @@ switch:
 binary_sensor:
   - platform: template
     name: "LD2450 Occupancy"
-    device_class: 
+    device_class: occupancy
     id: ld2450_occupancy
     filters:
       - delayed_off: !lambda return (id(ld2450_off_delay).state * 1000);
