@@ -6,8 +6,8 @@ esphome:
 uart:
   - id: LD2410_uart
     baud_rate: 256000
-    rx_pin: 18
     tx_pin: 21
+    rx_pin: 18
     parity: NONE
     stop_bits: 1
 
