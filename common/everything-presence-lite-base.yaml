@@ -68,7 +68,7 @@ wifi:
 
 improv_serial:
 
-i2c: # For the light sensor?
+i2c: # For the BH1750 light sensor
 -  id: bus_a
    sda: 8
    scl: 9
