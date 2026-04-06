@@ -346,6 +346,11 @@ button:
       id: ld2410_factory_reset
       disabled_by_default: true
       entity_category: config
+      on_press:
+        then:
+        - logger.log: "Performing LD2450 Factory reset"
+        - delay: 2s
+        - switch.turn_on: ld2410_engineering_mode
       web_server:
         sorting_group_id: controls
         sorting_weight: 88
