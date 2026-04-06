@@ -1,10 +1,7 @@
 substitutions:
-#  name: "plp-001"
-#  friendly_name: "Everything Presence Lite"
   illuminance_ld2410_update_interval: "5s"
   illuminance_bh1750_update_interval: "5s"
   hidden_ssid: "false"
-# log_level: DEBUG
 
 
   device_config:
@@ -17,15 +14,15 @@ substitutions:
     firmware_channel: "stable"
     model: "presence-lite-plus"
 
-update:
-  - platform: http_request
-    id: update_http_request
-    name: Everything Presence Lite Firmware
-    source: https://Nickduino.github.io/everything-presence-lite/everything-presence-lite-ha-manifest.json
-    disabled_by_default: true
-    web_server:
-      sorting_group_id: occupancy_group
-      sorting_weight: 360
+# update:
+#   - platform: http_request
+#     id: update_http_request
+#     name: Everything Presence Lite Firmware
+#     source: https://Nickduino.github.io/everything-presence-lite/everything-presence-lite-ha-manifest.json
+#     disabled_by_default: true
+#     web_server:
+#       sorting_group_id: occupancy_group
+#       sorting_weight: 360
     
 
 dashboard_import:
