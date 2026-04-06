@@ -174,7 +174,7 @@ button:
     entity_category: config
     on_press:
       then:
-      - logger.log: "Performing LD2450 Factory Reset"
+      - logger.log: "Performing LD2450 Factory reset"
       - switch.turn_on: LD2450_configuration
       - delay: 2s
       - uart.write:
