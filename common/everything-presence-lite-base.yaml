@@ -175,43 +175,43 @@ button:
     web_server:
       sorting_group_id: controls
       sorting_weight: 60
-  - platform: template    # Update taking into account different sensors: we might do without it as well?
-    name: "Apply Update"
-    entity_category: diagnostic
-    on_press:
-      - logger.log: "Applying firmware update based on selected configuration"
-      - lambda: |-
-          std::string base_url = "https://nickduino.github.io/everything-presence-lite/everything-presence-lite-ha";
-          std::string variant = "${device_config.sensor_variant}";
-          if (variant == "ld2450") {
-            variant.clear();
-          }
+  # - platform: template    # Update taking into account different sensors: we might do without it as well?
+  #   name: "Apply Update"
+  #   entity_category: diagnostic
+  #   on_press:
+  #     - logger.log: "Applying firmware update based on selected configuration"
+  #     - lambda: |-
+  #         std::string base_url = "https://nickduino.github.io/everything-presence-lite/everything-presence-lite-ha";
+  #         std::string variant = "${device_config.sensor_variant}";
+  #         if (variant == "ld2450") {
+  #           variant.clear();
+  #         }
 
-          if (!variant.empty()) {
-            base_url += "-";
-            base_url += variant;
-          }
+  #         if (!variant.empty()) {
+  #           base_url += "-";
+  #           base_url += variant;
+  #         }
 
-          if (id(firmware_ble).state == "Disabled") {
-            base_url += "-no-ble";
-          }
+  #         if (id(firmware_ble).state == "Disabled") {
+  #           base_url += "-no-ble";
+  #         }
 
-          if (id(firmware_co2).state == "Enabled") {
-            base_url += "-co2";
-          }
+  #         if (id(firmware_co2).state == "Enabled") {
+  #           base_url += "-co2";
+  #         }
 
-          base_url += "-manifest.json";
+  #         base_url += "-manifest.json";
 
-          ESP_LOGI("firmware", "Switching to manifest: %s", base_url.c_str());
-          id(update_http_request).set_source_url(base_url.c_str());
-      - component.update: update_http_request
-      - delay: 2s
-      - update.perform:
-          id: update_http_request
-          force_update: true
-    web_server:
-      sorting_group_id: controls
-      sorting_weight: 50
+  #         ESP_LOGI("firmware", "Switching to manifest: %s", base_url.c_str());
+  #         id(update_http_request).set_source_url(base_url.c_str());
+  #     - component.update: update_http_request
+  #     - delay: 2s
+  #     - update.perform:
+  #         id: update_http_request
+  #         force_update: true
+  #   web_server:
+  #     sorting_group_id: controls
+  #     sorting_weight: 50
   - platform: factory_reset
     id: "factory_reset_button"
     internal: True
