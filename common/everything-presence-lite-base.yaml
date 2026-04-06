@@ -169,8 +169,8 @@ binary_sensor: # Boot/Reset button: we could do without
 
 button:
   - platform: restart
-    icon: mdi:power-cycle
     name: "ESP Reboot"
+    icon: "mdi:restart"
     entity_category: config
     web_server:
       sorting_group_id: controls
