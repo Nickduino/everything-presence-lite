@@ -210,6 +210,7 @@ switch:
 
   - platform: template
     name: "LD2450 Bluetooth"
+    name: "mdi:bluetooth"
     id: ld2450_bluetooth_switch
     optimistic: true
     disabled_by_default: True
