@@ -63,117 +63,117 @@ sensor:
         name: Gate 0 Movement Energy
         entity_category: diagnostic
         web_server:
-          sorting_group_id: 2410_gates
+          sorting_group_id: gates_2410
           sorting_weight: 100
       still_energy:
         name: Gate 0 Still Energy
         entity_category: diagnostic
         web_server:
-          sorting_group_id: 2410_gates
+          sorting_group_id: gates_2410
           sorting_weight: 10
     g1:
       move_energy:
         name: Gate 1 Movement Energy
         entity_category: diagnostic
         web_server:
-          sorting_group_id: 2410_gates
+          sorting_group_id: gates_2410
           sorting_weight: 110
       still_energy:
         name: Gate 1 Still Energy
         entity_category: diagnostic
         web_server:
-          sorting_group_id: 2410_gates
+          sorting_group_id: gates_2410
           sorting_weight: 20
     g2:
       move_energy:
         name: Gate 2 Movement Energy
         entity_category: diagnostic
         web_server:
-          sorting_group_id: 2410_gates
+          sorting_group_id: gates_2410
           sorting_weight: 120
       still_energy:
         name: Gate 2 Still Energy
         entity_category: diagnostic
         web_server:
-          sorting_group_id: 2410_gates
+          sorting_group_id: gates_2410
           sorting_weight: 30
     g3:
       move_energy:
         name: Gate 3 Movement Energy
         entity_category: diagnostic
         web_server:
-          sorting_group_id: 2410_gates
+          sorting_group_id: gates_2410
           sorting_weight: 130
       still_energy:
         name: Gate 3 Still Energy
         entity_category: diagnostic
         web_server:
-          sorting_group_id: 2410_gates
+          sorting_group_id: gates_2410
           sorting_weight: 40
     g4:
       move_energy:
         name: Gate 4 Movement Energy
         entity_category: diagnostic
         web_server:
-          sorting_group_id: 2410_gates
+          sorting_group_id: gates_2410
           sorting_weight: 140
       still_energy:
         name: Gate 4 Still Energy
         entity_category: diagnostic
         web_server:
-          sorting_group_id: 2410_gates
+          sorting_group_id: gates_2410
           sorting_weight: 50
     g5:
       move_energy:
         name: Gate 5 Movement Energy
         entity_category: diagnostic
         web_server:
-          sorting_group_id: 2410_gates
+          sorting_group_id: gates_2410
           sorting_weight: 150
       still_energy:
         name: Gate 5 Still Energy
         entity_category: diagnostic
         web_server:
-          sorting_group_id: 2410_gates
+          sorting_group_id: gates_2410
           sorting_weight: 60
     g6:
       move_energy:
         name: Gate 6 Movement Energy
         entity_category: diagnostic
         web_server:
-          sorting_group_id: 2410_gates
+          sorting_group_id: gates_2410
           sorting_weight: 160
       still_energy:
         name: Gate 6 Still Energy
         entity_category: diagnostic
         web_server:
-          sorting_group_id: 2410_gates
+          sorting_group_id: gates_2410
           sorting_weight: 70
     g7:
       move_energy:
         name: Gate 7 Movement Energy
         entity_category: diagnostic
         web_server:
-          sorting_group_id: 2410_gates
+          sorting_group_id: gates_2410
           sorting_weight: 170
       still_energy:
         name: Gate 7 Still Energy
         entity_category: diagnostic
         web_server:
-          sorting_group_id: 2410_gates
+          sorting_group_id: gates_2410
           sorting_weight: 80
     g8:
       move_energy:
         name: Gate 8 Movement Energy
         entity_category: diagnostic
         web_server:
-          sorting_group_id: 2410_gates
+          sorting_group_id: gates_2410
           sorting_weight: 180
       still_energy:
         name: Gate 8 Still Energy
         entity_category: diagnostic
         web_server:
-          sorting_group_id: 2410_gates
+          sorting_group_id: gates_2410
           sorting_weight: 90
 
 switch:
