@@ -1612,12 +1612,12 @@ text:
 uart:
   - id: LD2450_uart
     tx_pin: 
-      number: GPIO17
+      number: GPIO2
       mode:
         input: true
         pullup: true
     rx_pin: 
-      number: GPIO16
+      number: GPIO3
       mode:
         input: true
         pullup: true
