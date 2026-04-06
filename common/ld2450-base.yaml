@@ -155,6 +155,7 @@ button:
   - platform: template
     name: "LD2450 Reboot"
     id: reboot_ld2450_sensor
+    icon: "mdi:restart"
     disabled_by_default: True
     entity_category: config
     on_press:
@@ -169,6 +170,7 @@ button:
       sorting_weight: 70
   - platform: template
     name: "LD2450 Factory reset sensor"
+    icon: "mdi:restart-alert"
     id: factory_reset_ld2450_sensor
     disabled_by_default: True
     entity_category: config
