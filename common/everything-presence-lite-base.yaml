@@ -28,7 +28,7 @@ esphome:
 #   level: ${log_level}
 
 # Enable Home Assistant API
-api:
+# api:
   # actions:
   #   - action: set_update_manifest
   #     variables:
@@ -56,13 +56,13 @@ api:
 
 # To be added to previous block to add LD2410?              root["second_sensor_variant"]     = "${ device_config.second_sensor_variant }"; # Trying to activate LD2410
 
-ota:
-  - platform: esphome
-    id: ota_esphome
-  - platform: http_request
-    id: ota_http_request
+# ota:
+#   - platform: esphome
+#     id: ota_esphome
+#   - platform: http_request
+#     id: ota_http_request
 
-http_request:
+# http_request:
 
 wifi:
 
