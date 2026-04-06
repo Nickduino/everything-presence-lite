@@ -206,89 +206,137 @@ number:
       move_threshold:
         name: Gate 0 Movement Sensitivity
         entity_category: config
-        # min_value: 0
-        # max_value: 100
-        # step: 1
         mode: box
+        web_server:
+          sorting_group_id: gates_2410
+          sorting_weight: 105
       still_threshold:
         name: Gate 0 Still Sensitivity
         entity_category: config
-        # min_value: 0
-        # max_value: 100
-        # step: 1
         mode: box
+        web_server:
+          sorting_group_id: gates_2410
+          sorting_weight: 15
     g1:
       move_threshold:
         name: Gate 1 Movement Sensitivity
         entity_category: config
         mode: box
+        web_server:
+          sorting_group_id: gates_2410
+          sorting_weight: 115
       still_threshold:
         name: Gate 1 Still Sensitivity
         entity_category: config
         mode: box
+        web_server:
+          sorting_group_id: gates_2410
+          sorting_weight: 25
     g2:
       move_threshold:
         name: Gate 2 Movement Sensitivity
         entity_category: config
         mode: box
+        web_server:
+          sorting_group_id: gates_2410
+          sorting_weight: 125
       still_threshold:
         name: Gate 2 Still Sensitivity
         entity_category: config
         mode: box
+        web_server:
+          sorting_group_id: gates_2410
+          sorting_weight: 35
     g3:
       move_threshold:
         name: Gate 3 Movement Sensitivity
         entity_category: config
         mode: box
+        web_server:
+          sorting_group_id: gates_2410
+          sorting_weight: 135
       still_threshold:
         name: Gate 3 Still Sensitivity
         entity_category: config
         mode: box
+        web_server:
+          sorting_group_id: gates_2410
+          sorting_weight: 45
     g4:
       move_threshold:
         name: Gate 4 Movement Sensitivity
         entity_category: config
         mode: box
+        web_server:
+          sorting_group_id: gates_2410
+          sorting_weight: 145
       still_threshold:
         name: Gate 4 Still Sensitivity
         entity_category: config
         mode: box
+        web_server:
+          sorting_group_id: gates_2410
+          sorting_weight: 55
     g5:
       move_threshold:
         name: Gate 5 Movement Sensitivity
         entity_category: config
         mode: box
+        web_server:
+          sorting_group_id: gates_2410
+          sorting_weight: 155
       still_threshold:
         name: Gate 5 Still Sensitivity
         entity_category: config
         mode: box
+        web_server:
+          sorting_group_id: gates_2410
+          sorting_weight: 65
     g6:
       move_threshold:
         name: Gate 6 Movement Sensitivity
         entity_category: config
         mode: box
+        web_server:
+          sorting_group_id: gates_2410
+          sorting_weight: 165
       still_threshold:
         name: Gate 6 Still Sensitivity
         entity_category: config
         mode: box
+        web_server:
+          sorting_group_id: gates_2410
+          sorting_weight: 75
     g7:
       move_threshold:
         name: Gate 7 Movement Sensitivity
         entity_category: config
         mode: box
+        web_server:
+          sorting_group_id: gates_2410
+          sorting_weight: 175
       still_threshold:
         name: Gate 7 Still Sensitivity
         entity_category: config
         mode: box
+        web_server:
+          sorting_group_id: gates_2410
+          sorting_weight: 85
     g8:
       move_threshold:
         name: Gate 8 Movement Sensitivity
         entity_category: config
         mode: box
+        web_server:
+          sorting_group_id: gates_2410
+          sorting_weight: 185
       still_threshold:
         name: Gate 8 Still Sensitivity
         entity_category: config
         mode: box
+        web_server:
+          sorting_group_id: gates_2410
+          sorting_weight: 95
 
 button:
   - platform: ld2410
