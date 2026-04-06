@@ -352,7 +352,7 @@ button:
       disabled_by_default: true
       entity_category: config
     query_params:
-      name: Get Values
+      name: LD2410 Get Values
       disabled_by_default: true
       entity_category: config
 
