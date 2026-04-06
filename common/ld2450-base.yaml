@@ -168,13 +168,13 @@ button:
       sorting_group_id: controls
       sorting_weight: 70
   - platform: template
-    name: "Factory Reset mmWave Sensor"
+    name: "Factory Reset LD2450 mmWave Sensor"
     id: factory_reset_ld2450_sensor
     disabled_by_default: True
     entity_category: config
     on_press:
       then:
-      - logger.log: "Performing Factory Reset"
+      - logger.log: "Performing LD2450 Factory Reset"
       - switch.turn_on: LD2450_configuration
       - delay: 2s
       - uart.write:
@@ -249,7 +249,7 @@ switch:
       sorting_weight: 40
 
   - platform: template
-    name: "Upside Down Mounting" # Check if we need to do it for the LD2410 as well
+    name: "LD2450 Upside Down Mounting" # Check if we need to do it for the LD2410 as well
     id: inverse_mounting
     restore_mode: RESTORE_DEFAULT_OFF
     optimistic: True
@@ -391,7 +391,7 @@ number:
       sorting_group_id: configuration
       sorting_weight: 10
   - platform: template # <- It should be the same for both sensors (but maybe the LD2410 doesn't care?)
-    name: "Installation Angle"
+    name: "LD2450 Installation Angle"
     id: installation_angle_ui
     unit_of_measurement: "º"
     min_value: -45
@@ -968,7 +968,7 @@ number:
 
 sensor:
   - platform: template
-    name: "Assumed Present Remaining"
+    name: "LD2450 Assumed Present Remaining"
     id: ld2450_assumed_present_remaining_s
     unit_of_measurement: "s"
     accuracy_decimals: 0
@@ -1234,7 +1234,7 @@ sensor:
 
 select:
   - platform: template
-    name: 'Update speed'
+    name: 'LD2450 Update speed'
     id: "update_speed_select"
     icon: 'mdi:speedometer'
     optimistic: true
@@ -1254,7 +1254,7 @@ select:
       then:
         - lambda: id(ld2450_update_interval) = (i + 1) * 100;
   - platform: template
-    name: "Extra entities update"
+    name: "LD2450 Extra entities update"
     icon: 'mdi:update'
     optimistic: true
     restore_value: true
@@ -1287,7 +1287,7 @@ select:
                 id(ld2450_entities_update_max_count) = i + 1;
             }
   - platform: template
-    name: "Tracking Behaviour"
+    name: "LD2450 Tracking Behaviour"
     id: tracking_behaviour
     icon: 'mdi:dots-vertical'
     optimistic: true
