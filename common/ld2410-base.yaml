@@ -348,7 +348,7 @@ button:
       entity_category: config
       on_press:
         then:
-        - logger.log: "Performing LD2450 Factory reset"
+        - logger.log: "Performing LD2410 Factory reset"
         - delay: 2s
         - switch.turn_on: ld2410_engineering_mode
       web_server:
