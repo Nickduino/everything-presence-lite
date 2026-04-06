@@ -122,6 +122,8 @@ number:
 sensor:
   - platform: bh1750
     name: BH1750 Illuminance
+    device_class: illuminance
+    icon: "mdi:brightness-5"
     id: illuminance_bh1750
     i2c_id: bus_a
     address: 0x23
