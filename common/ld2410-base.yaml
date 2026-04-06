@@ -22,10 +22,10 @@ binary_sensor:
         sorting_group_id: occupancy_group
         sorting_weight: 10
     has_moving_target:
-      name: LD2410 Moving Target
+      name: LD2410 Moving target
       entity_category: diagnostic
     has_still_target:
-      name: LD2410 Still Target
+      name: LD2410 Still target
       entity_category: diagnostic
   - platform: gpio
     pin: 7
@@ -45,133 +45,133 @@ sensor:
         sorting_group_id: occupancy_group
         sorting_weight: 6
     moving_distance:
-      name: LD2410 Moving Target Distance
+      name: LD2410 Moving Target distance
       entity_category: diagnostic
     still_distance:
-      name: LD2410 Still Target Distance
+      name: LD2410 Still Target distance
       entity_category: diagnostic
     moving_energy:
-      name: LD2410 Moving Target Energy
+      name: LD2410 Moving Target energy
       entity_category: diagnostic
     still_energy:
-      name: LD2410 Still Target Energy
+      name: LD2410 Still Target energy
       entity_category: diagnostic
     detection_distance:
-      name: LD2410 Detection Distance
+      name: LD2410 Detection distance
       entity_category: diagnostic
     g0:
       move_energy:
-        name: Gate 0 Movement Energy
+        name: Gate 0 movement energy
         entity_category: diagnostic
         web_server:
           sorting_group_id: gates_2410
           sorting_weight: 100
       still_energy:
-        name: Gate 0 Still Energy
+        name: Gate 0 still energy
         entity_category: diagnostic
         web_server:
           sorting_group_id: gates_2410
           sorting_weight: 10
     g1:
       move_energy:
-        name: Gate 1 Movement Energy
+        name: Gate 1 movement energy
         entity_category: diagnostic
         web_server:
           sorting_group_id: gates_2410
           sorting_weight: 110
       still_energy:
-        name: Gate 1 Still Energy
+        name: Gate 1 still energy
         entity_category: diagnostic
         web_server:
           sorting_group_id: gates_2410
           sorting_weight: 20
     g2:
       move_energy:
-        name: Gate 2 Movement Energy
+        name: Gate 2 movement energy
         entity_category: diagnostic
         web_server:
           sorting_group_id: gates_2410
           sorting_weight: 120
       still_energy:
-        name: Gate 2 Still Energy
+        name: Gate 2 still energy
         entity_category: diagnostic
         web_server:
           sorting_group_id: gates_2410
           sorting_weight: 30
     g3:
       move_energy:
-        name: Gate 3 Movement Energy
+        name: Gate 3 movement energy
         entity_category: diagnostic
         web_server:
           sorting_group_id: gates_2410
           sorting_weight: 130
       still_energy:
-        name: Gate 3 Still Energy
+        name: Gate 3 still energy
         entity_category: diagnostic
         web_server:
           sorting_group_id: gates_2410
           sorting_weight: 40
     g4:
       move_energy:
-        name: Gate 4 Movement Energy
+        name: Gate 4 movement energy
         entity_category: diagnostic
         web_server:
           sorting_group_id: gates_2410
           sorting_weight: 140
       still_energy:
-        name: Gate 4 Still Energy
+        name: Gate 4 still energy
         entity_category: diagnostic
         web_server:
           sorting_group_id: gates_2410
           sorting_weight: 50
     g5:
       move_energy:
-        name: Gate 5 Movement Energy
+        name: Gate 5 movement energy
         entity_category: diagnostic
         web_server:
           sorting_group_id: gates_2410
           sorting_weight: 150
       still_energy:
-        name: Gate 5 Still Energy
+        name: Gate 5 still energy
         entity_category: diagnostic
         web_server:
           sorting_group_id: gates_2410
           sorting_weight: 60
     g6:
       move_energy:
-        name: Gate 6 Movement Energy
+        name: Gate 6 movement energy
         entity_category: diagnostic
         web_server:
           sorting_group_id: gates_2410
           sorting_weight: 160
       still_energy:
-        name: Gate 6 Still Energy
+        name: Gate 6 still energy
         entity_category: diagnostic
         web_server:
           sorting_group_id: gates_2410
           sorting_weight: 70
     g7:
       move_energy:
-        name: Gate 7 Movement Energy
+        name: Gate 7 movement energy
         entity_category: diagnostic
         web_server:
           sorting_group_id: gates_2410
           sorting_weight: 170
       still_energy:
-        name: Gate 7 Still Energy
+        name: Gate 7 still energy
         entity_category: diagnostic
         web_server:
           sorting_group_id: gates_2410
           sorting_weight: 80
     g8:
       move_energy:
-        name: Gate 8 Movement Energy
+        name: Gate 8 movement energy
         entity_category: diagnostic
         web_server:
           sorting_group_id: gates_2410
           sorting_weight: 180
       still_energy:
-        name: Gate 8 Still Energy
+        name: Gate 8 still energy
         entity_category: diagnostic
         web_server:
           sorting_group_id: gates_2410
@@ -180,7 +180,7 @@ sensor:
 switch:
   - platform: ld2410
     engineering_mode:
-      name: "LD2410 Engineering Mode"
+      name: "LD2410 Engineering mode"
       id: "ld2410_engineering_mode"
       entity_category: config
     bluetooth:
@@ -191,28 +191,28 @@ switch:
 number:
   - platform: ld2410
     timeout:
-      name: LD2410 Occupancy Off Delay
+      name: LD2410 Occupancy off delay
       entity_category: config
     light_threshold:
-      name: LD2410 Light Threshold
+      name: LD2410 Light threshold
       disabled_by_default: True
       entity_category: config
     max_move_distance_gate:
-      name: LD2410 Max Movement Distance Gate
+      name: LD2410 Max movement distance gate
       entity_category: config
     max_still_distance_gate:
-      name: LD2410 Max Still Distance Gate
+      name: LD2410 Max still distance gate
       entity_category: config
     g0:
       move_threshold:
-        name: Gate 0 Movement Sensitivity
+        name: Gate 0 movement sensitivity
         entity_category: config
         mode: box
         web_server:
           sorting_group_id: gates_2410
           sorting_weight: 105
       still_threshold:
-        name: Gate 0 Still Sensitivity
+        name: Gate 0 still sensitivity
         entity_category: config
         mode: box
         web_server:
@@ -220,14 +220,14 @@ number:
           sorting_weight: 15
     g1:
       move_threshold:
-        name: Gate 1 Movement Sensitivity
+        name: Gate 1 movement sensitivity
         entity_category: config
         mode: box
         web_server:
           sorting_group_id: gates_2410
           sorting_weight: 115
       still_threshold:
-        name: Gate 1 Still Sensitivity
+        name: Gate 1 still sensitivity
         entity_category: config
         mode: box
         web_server:
@@ -235,14 +235,14 @@ number:
           sorting_weight: 25
     g2:
       move_threshold:
-        name: Gate 2 Movement Sensitivity
+        name: Gate 2 movement sensitivity
         entity_category: config
         mode: box
         web_server:
           sorting_group_id: gates_2410
           sorting_weight: 125
       still_threshold:
-        name: Gate 2 Still Sensitivity
+        name: Gate 2 still sensitivity
         entity_category: config
         mode: box
         web_server:
@@ -250,14 +250,14 @@ number:
           sorting_weight: 35
     g3:
       move_threshold:
-        name: Gate 3 Movement Sensitivity
+        name: Gate 3 movement sensitivity
         entity_category: config
         mode: box
         web_server:
           sorting_group_id: gates_2410
           sorting_weight: 135
       still_threshold:
-        name: Gate 3 Still Sensitivity
+        name: Gate 3 still sensitivity
         entity_category: config
         mode: box
         web_server:
@@ -265,14 +265,14 @@ number:
           sorting_weight: 45
     g4:
       move_threshold:
-        name: Gate 4 Movement Sensitivity
+        name: Gate 4 movement sensitivity
         entity_category: config
         mode: box
         web_server:
           sorting_group_id: gates_2410
           sorting_weight: 145
       still_threshold:
-        name: Gate 4 Still Sensitivity
+        name: Gate 4 still sensitivity
         entity_category: config
         mode: box
         web_server:
@@ -280,14 +280,14 @@ number:
           sorting_weight: 55
     g5:
       move_threshold:
-        name: Gate 5 Movement Sensitivity
+        name: Gate 5 movement sensitivity
         entity_category: config
         mode: box
         web_server:
           sorting_group_id: gates_2410
           sorting_weight: 155
       still_threshold:
-        name: Gate 5 Still Sensitivity
+        name: Gate 5 still sensitivity
         entity_category: config
         mode: box
         web_server:
@@ -295,14 +295,14 @@ number:
           sorting_weight: 65
     g6:
       move_threshold:
-        name: Gate 6 Movement Sensitivity
+        name: Gate 6 movement sensitivity
         entity_category: config
         mode: box
         web_server:
           sorting_group_id: gates_2410
           sorting_weight: 165
       still_threshold:
-        name: Gate 6 Still Sensitivity
+        name: Gate 6 still sensitivity
         entity_category: config
         mode: box
         web_server:
@@ -310,14 +310,14 @@ number:
           sorting_weight: 75
     g7:
       move_threshold:
-        name: Gate 7 Movement Sensitivity
+        name: Gate 7 movement sensitivity
         entity_category: config
         mode: box
         web_server:
           sorting_group_id: gates_2410
           sorting_weight: 175
       still_threshold:
-        name: Gate 7 Still Sensitivity
+        name: Gate 7 still sensitivity
         entity_category: config
         mode: box
         web_server:
@@ -325,14 +325,14 @@ number:
           sorting_weight: 85
     g8:
       move_threshold:
-        name: Gate 8 Movement Sensitivity
+        name: Gate 8 movement sensitivity
         entity_category: config
         mode: box
         web_server:
           sorting_group_id: gates_2410
           sorting_weight: 185
       still_threshold:
-        name: Gate 8 Still Sensitivity
+        name: Gate 8 still sensitivity
         entity_category: config
         mode: box
         web_server:
@@ -342,45 +342,51 @@ number:
 button:
   - platform: ld2410
     factory_reset:
-      name: "LD2410 Factory Reset"
+      name: "LD2410 Factory reset sensor"
       id: ld2410_factory_reset
       disabled_by_default: true
       entity_category: config
+      web_server:
+        sorting_group_id: controls
+        sorting_weight: 88
     restart:
-      name: "LD2410 Restart"
+      name: "LD2410 Reboot"
       id: ld2410_restart
       disabled_by_default: true
       entity_category: config
+      web_server:
+        sorting_group_id: controls
+        sorting_weight: 70
     query_params:
-      name: LD2410 Get Values
+      name: LD2410 Get values
       disabled_by_default: true
       entity_category: config
 
 text_sensor:
   - platform: ld2410
     version:
-      name: "LD2410 Firmware Version"
+      name: "LD2410 firmware version"
       entity_category: diagnostic
     mac_address:
-      name: "LD2410 MAC Address"
+      name: "LD2410 MAC address"
       disabled_by_default: true
       entity_category: diagnostic
 
 select:
   - platform: ld2410
     distance_resolution:
-      name: "LD2410 Distance Gate Resolution"
+      name: "LD2410 Distance gate resolution"
       disabled_by_default: true
       entity_category: config
     baud_rate:
-      name: "LD2410 Baud Rate"
+      name: "LD2410 Baud rate"
       disabled_by_default: true
       entity_category: config
     light_function:
-      name: LD2410 Light Function
+      name: LD2410 Light function
       disabled_by_default: true
       entity_category: config
     out_pin_level:
-      name: LD2410 GPIO Pin Level
+      name: LD2410 GPIO pin level
       disabled_by_default: true
       entity_category: config
