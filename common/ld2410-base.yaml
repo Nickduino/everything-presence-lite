@@ -45,16 +45,16 @@ sensor:
         sorting_group_id: occupancy_group
         sorting_weight: 6
     moving_distance:
-      name: LD2410 Moving Target distance
+      name: LD2410 Moving target distance
       entity_category: diagnostic
     still_distance:
       name: LD2410 Still Target distance
       entity_category: diagnostic
     moving_energy:
-      name: LD2410 Moving Target energy
+      name: LD2410 Moving target energy
       entity_category: diagnostic
     still_energy:
-      name: LD2410 Still Target energy
+      name: LD2410 Still target energy
       entity_category: diagnostic
     detection_distance:
       name: LD2410 Detection distance
@@ -193,6 +193,9 @@ number:
     timeout:
       name: LD2410 Occupancy off delay
       entity_category: config
+      web_server:
+        sorting_group_id: presence_logic
+        sorting_weight: 60
     light_threshold:
       name: LD2410 Light threshold
       disabled_by_default: True
@@ -370,7 +373,7 @@ button:
 text_sensor:
   - platform: ld2410
     version:
-      name: "LD2410 firmware version"
+      name: "LD2410 Firmware version"
       entity_category: diagnostic
     mac_address:
       name: "LD2410 MAC address"
