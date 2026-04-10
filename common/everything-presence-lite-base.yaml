@@ -219,7 +219,7 @@ button:
 select:
   - platform: template
     id: firmware_ble
-    name: Bluetooth Proxy
+    name: Bluetooth proxy
     icon: "mdi:bluetooth"
     entity_category: config
     optimistic: true
