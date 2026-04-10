@@ -242,7 +242,7 @@ switch:
       sorting_weight: 40
 
   - platform: template
-    name: "Stale Target Reset"
+    name: "Stale target reset"
     id: aggressive_ld2450_target_clearing
     restore_mode: RESTORE_DEFAULT_OFF 
     optimistic: True
@@ -263,7 +263,7 @@ switch:
       sorting_weight: 30
 
   - platform: template
-    name: "Entry Exit Enabled"
+    name: "Entry exit enabled"
     id: ld2450_entry_exit_enabled
     restore_mode: RESTORE_DEFAULT_OFF
     optimistic: true
@@ -273,7 +273,7 @@ switch:
       sorting_weight: 20
 
   - platform: template
-    name: "Polygon Zones"
+    name: "Polygon zones"
     id: ld2450_polygon_zones_enabled
     restore_mode: RESTORE_DEFAULT_OFF
     optimistic: true
@@ -357,7 +357,7 @@ binary_sensor:
       sorting_group_id: occupancy_group
       sorting_weight: 280
   - platform: template
-    name: "LD2450 Assumed Present"
+    name: "LD2450 Assumed present"
     id: ld2450_assumed_present
     entity_category: diagnostic
     web_server:
@@ -411,7 +411,7 @@ number:
       sorting_weight: 20
 
   - platform: template
-    name: "Exit Threshold Pct"
+    name: "Exit threshold"
     id: ld2450_exit_threshold_pct
     min_value: 0
     max_value: 100
@@ -426,7 +426,7 @@ number:
       sorting_weight: 22
 
   - platform: template
-    name: "Assume Present Timeout"
+    name: "Assume present timeout"
     id: ld2450_assume_present_timeout_s
     min_value: 0
     max_value: 600
@@ -441,7 +441,7 @@ number:
       sorting_weight: 30
 
   - platform: template
-    name: "Entry Zone 1 Begin X"
+    name: "Entry zone 1 begin X"
     id: entry_zone_1_begin_x
     max_value: 6000
     min_value: -6000
@@ -455,7 +455,7 @@ number:
       sorting_group_id: zones
       sorting_weight: 170
   - platform: template
-    name: "Entry Zone 1 End X"
+    name: "Entry zone 1 end X"
     id: entry_zone_1_end_x
     max_value: 6000
     min_value: -6000
@@ -469,7 +469,7 @@ number:
       sorting_group_id: zones
       sorting_weight: 180
   - platform: template
-    name: "Entry Zone 1 Begin Y"
+    name: "Entry zone 1 begin Y"
     id: entry_zone_1_begin_y
     max_value: 6000
     min_value: -1560
@@ -483,7 +483,7 @@ number:
       sorting_group_id: zones
       sorting_weight: 190
   - platform: template
-    name: "Entry Zone 1 End Y"
+    name: "Entry zone 1 end Y"
     id: entry_zone_1_end_y
     max_value: 6000
     min_value: -1560
@@ -498,7 +498,7 @@ number:
       sorting_weight: 200
 
   - platform: template
-    name: "Entry Zone 2 Begin X"
+    name: "Entry zone 2 begin X"
     id: entry_zone_2_begin_x
     max_value: 6000
     min_value: -6000
@@ -513,7 +513,7 @@ number:
       sorting_group_id: zones
       sorting_weight: 210
   - platform: template
-    name: "Entry Zone 2 End X"
+    name: "Entry zone 2 end X"
     id: entry_zone_2_end_x
     max_value: 6000
     min_value: -6000
@@ -528,7 +528,7 @@ number:
       sorting_group_id: zones
       sorting_weight: 220
   - platform: template
-    name: "Entry Zone 2 Begin Y"
+    name: "Entry zone 2 begin Y"
     id: entry_zone_2_begin_y
     max_value: 6000
     min_value: -1560
@@ -543,7 +543,7 @@ number:
       sorting_group_id: zones
       sorting_weight: 230
   - platform: template
-    name: "Entry Zone 2 End Y"
+    name: "Entry zone 2 end Y"
     id: entry_zone_2_end_y
     max_value: 6000
     min_value: -1560
@@ -559,7 +559,7 @@ number:
       sorting_weight: 240
 
   - platform: template
-    name: "Zone 1 Begin X"
+    name: "Zone 1 begin X"
     id: zone1_begin_x
     max_value: 6000
     min_value: -6000
@@ -573,7 +573,7 @@ number:
       sorting_group_id: zones
       sorting_weight: 10
   - platform: template
-    name: "Zone 1 End X"
+    name: "Zone 1 end X"
     id: zone1_end_x
     max_value: 6000
     min_value: -6000
@@ -587,7 +587,7 @@ number:
       sorting_group_id: zones
       sorting_weight: 20
   - platform: template
-    name: "Zone 1 Begin Y"
+    name: "Zone 1 begin Y"
     id: zone1_begin_y
     max_value: 6000
     min_value: -1560 # if epl is rotated 45deg, a target could be detected at negative values: -6000*sin(60deg-45deg) = ~-1552
@@ -601,7 +601,7 @@ number:
       sorting_group_id: zones
       sorting_weight: 30
   - platform: template
-    name: "Zone 1 End Y"
+    name: "Zone 1 end Y"
     id: zone1_end_y
     max_value: 6000
     min_value: -1560
@@ -615,7 +615,7 @@ number:
       sorting_group_id: zones
       sorting_weight: 40
   - platform: template
-    name: "Zone 1 Occupancy Off Delay"
+    name: "Zone 1 Occupancy off delay"
     id: zone_1_off_delay
     max_value: 600
     min_value: 0
@@ -630,7 +630,7 @@ number:
       sorting_weight: 11
 
   - platform: template
-    name: "Zone 2 Begin X"
+    name: "Zone 2 begin X"
     id: zone2_begin_x
     max_value: 6000
     min_value: -6000
@@ -644,7 +644,7 @@ number:
       sorting_group_id: zones
       sorting_weight: 50
   - platform: template
-    name: "Zone 2 End X"
+    name: "Zone 2 end X"
     id: zone2_end_x
     max_value: 6000
     min_value: -6000
@@ -658,7 +658,7 @@ number:
       sorting_group_id: zones
       sorting_weight: 60
   - platform: template
-    name: "Zone 2 Begin Y"
+    name: "Zone 2 begin Y"
     id: zone2_begin_y
     max_value: 6000
     min_value: -1560
@@ -672,7 +672,7 @@ number:
       sorting_group_id: zones
       sorting_weight: 70
   - platform: template
-    name: "Zone 2 End Y"
+    name: "Zone 2 end Y"
     id: zone2_end_y
     max_value: 6000
     min_value: -1560
@@ -686,7 +686,7 @@ number:
       sorting_group_id: zones
       sorting_weight: 80
   - platform: template
-    name: "Zone 2 Occupancy Off Delay"
+    name: "Zone 2 Occupancy off delay"
     id: zone_2_off_delay
     max_value: 600
     min_value: 0
@@ -702,7 +702,7 @@ number:
       sorting_weight: 12
 
   - platform: template
-    name: "Zone 3 Begin X"
+    name: "Zone 3 begin X"
     id: zone3_begin_x
     max_value: 6000
     min_value: -6000
@@ -716,7 +716,7 @@ number:
       sorting_group_id: zones
       sorting_weight: 90
   - platform: template
-    name: "Zone 3 End X"
+    name: "Zone 3 end X"
     id: zone3_end_x
     max_value: 6000
     min_value: -6000
@@ -730,7 +730,7 @@ number:
       sorting_group_id: zones
       sorting_weight: 100
   - platform: template
-    name: "Zone 3 Begin Y"
+    name: "Zone 3 begin Y"
     id: zone3_begin_y
     max_value: 6000
     min_value: -1560
@@ -744,7 +744,7 @@ number:
       sorting_group_id: zones
       sorting_weight: 110
   - platform: template
-    name: "Zone 3 End Y"
+    name: "Zone 3 end Y"
     id: zone3_end_y
     max_value: 6000
     min_value: -1560
@@ -758,7 +758,7 @@ number:
       sorting_group_id: zones
       sorting_weight: 120
   - platform: template
-    name: "Zone 3 Occupancy Off Delay"
+    name: "Zone 3 Occupancy off delay"
     id: zone_3_off_delay
     max_value: 600
     min_value: 0
@@ -774,7 +774,7 @@ number:
       sorting_weight: 13
 
   - platform: template
-    name: "Zone 4 Begin X"
+    name: "Zone 4 begin X"
     id: zone4_begin_x
     max_value: 6000
     min_value: -6000
@@ -788,7 +788,7 @@ number:
       sorting_group_id: zones
       sorting_weight: 130
   - platform: template
-    name: "Zone 4 End X"
+    name: "Zone 4 end X"
     id: zone4_end_x
     max_value: 6000
     min_value: -6000
@@ -802,7 +802,7 @@ number:
       sorting_group_id: zones
       sorting_weight: 140
   - platform: template
-    name: "Zone 4 Begin Y"
+    name: "Zone 4 begin Y"
     id: zone4_begin_y
     max_value: 6000
     min_value: -1560
@@ -816,7 +816,7 @@ number:
       sorting_group_id: zones
       sorting_weight: 150
   - platform: template
-    name: "Zone 4 End Y"
+    name: "Zone 4 end Y"
     id: zone4_end_y
     max_value: 6000
     min_value: -1560
@@ -830,7 +830,7 @@ number:
       sorting_group_id: zones
       sorting_weight: 160
   - platform: template
-    name: "Zone 4 Occupancy Off Delay"
+    name: "Zone 4 Occupancy off delay"
     id: zone_4_off_delay
     max_value: 600
     min_value: 0
@@ -846,7 +846,7 @@ number:
       sorting_weight: 14
 
   - platform: template
-    name: "Occupancy Mask 1 Begin X"
+    name: "Occupancy mask 1 begin X"
     id: occupancy_mask_1_begin_x
     max_value: 6000
     min_value: -6000
@@ -859,7 +859,7 @@ number:
       sorting_group_id: zones
       sorting_weight: 250
   - platform: template
-    name: "Occupancy Mask 1 End X"
+    name: "Occupancy mask 1 end X"
     id: occupancy_mask_1_end_x
     max_value: 6000
     min_value: -6000
@@ -872,7 +872,7 @@ number:
       sorting_group_id: zones
       sorting_weight: 260
   - platform: template
-    name: "Occupancy Mask 1 Begin Y"
+    name: "Occupancy mask 1 begin Y"
     id: occupancy_mask_1_begin_y
     max_value: 6000
     min_value: -1560
@@ -885,7 +885,7 @@ number:
       sorting_group_id: zones
       sorting_weight: 270
   - platform: template
-    name: "Occupancy Mask 1 End Y"
+    name: "Occupancy mask 1 end Y"
     id: occupancy_mask_1_end_y
     max_value: 6000
     min_value: -1560
@@ -898,7 +898,7 @@ number:
       sorting_group_id: zones
       sorting_weight: 280
   - platform: template
-    name: "Occupancy Mask 2 Begin X"
+    name: "Occupancy mask 2 begin X"
     id: occupancy_mask_2_begin_x
     max_value: 6000
     min_value: -6000
@@ -912,7 +912,7 @@ number:
       sorting_group_id: zones
       sorting_weight: 290
   - platform: template
-    name: "Occupancy Mask 2 End X"
+    name: "Occupancy mask 2 end X"
     id: occupancy_mask_2_end_x
     max_value: 6000
     min_value: -6000
@@ -926,7 +926,7 @@ number:
       sorting_group_id: zones
       sorting_weight: 300
   - platform: template
-    name: "Occupancy Mask 2 Begin Y"
+    name: "Occupancy mask 2 begin Y"
     id: occupancy_mask_2_begin_y
     max_value: 6000
     min_value: -1560
@@ -940,7 +940,7 @@ number:
       sorting_group_id: zones
       sorting_weight: 310
   - platform: template
-    name: "Occupancy Mask 2 End Y"
+    name: "Occupancy mask 2 end Y"
     id: occupancy_mask_2_end_y
     max_value: 6000
     min_value: -1560
@@ -955,7 +955,7 @@ number:
       sorting_weight: 320
 
   - platform: template
-    name: "Stale Target Reset Timeout"
+    name: "Stale target reset timeout"
     id: aggressive_timeout
     min_value: 1
     max_value: 600
@@ -971,7 +971,7 @@ number:
 
 sensor:
   - platform: template
-    name: "LD2450 Assumed Present Remaining"
+    name: "LD2450 Assumed present remaining"
     id: ld2450_assumed_present_remaining_s
     unit_of_measurement: "s"
     accuracy_decimals: 0
@@ -1176,7 +1176,7 @@ sensor:
       sorting_group_id: occupancy_group
       sorting_weight: 300
   - platform: template
-    name: "Zone 1 Target Count"
+    name: "Zone 1 Target count"
     id: zone1_target_count
     accuracy_decimals: 0
     unit_of_measurement: " "
@@ -1185,7 +1185,7 @@ sensor:
       sorting_group_id: occupancy_group
       sorting_weight: 50
   - platform: template
-    name: "Zone 2 Target Count"
+    name: "Zone 2 Target count"
     id: zone2_target_count
     accuracy_decimals: 0
     disabled_by_default: true
@@ -1195,7 +1195,7 @@ sensor:
       sorting_group_id: occupancy_group
       sorting_weight: 70
   - platform: template
-    name: "Zone 3 Target Count"
+    name: "Zone 3 Target count"
     id: zone3_target_count
     accuracy_decimals: 0
     disabled_by_default: true
@@ -1205,7 +1205,7 @@ sensor:
       sorting_group_id: occupancy_group
       sorting_weight: 90
   - platform: template
-    name: "Zone 4 Target Count"
+    name: "Zone 4 Target count"
     id: zone4_target_count
     accuracy_decimals: 0
     disabled_by_default: true
@@ -1215,7 +1215,7 @@ sensor:
       sorting_group_id: occupancy_group
       sorting_weight: 110
   - platform: template
-    name: "Occupancy Mask 1 Target Count"
+    name: "Occupancy mask 1 Target count"
     id: occupancy_mask_1_target_count
     accuracy_decimals: 0
     disabled_by_default: true
@@ -1225,7 +1225,7 @@ sensor:
       sorting_group_id: occupancy_group
       sorting_weight: 120
   - platform: template
-    name: "Occupancy Mask 2 Target Count"
+    name: "Occupancy mask 2 Target count"
     id: occupancy_mask_2_target_count
     accuracy_decimals: 0
     disabled_by_default: true
@@ -1356,7 +1356,7 @@ select:
 
 text:
   - platform: template
-    name: "Polygon Zone 1"
+    name: "Polygon zone 1"
     id: poly_zone_1
     mode: text
     optimistic: true
@@ -1388,7 +1388,7 @@ text:
       sorting_group_id: polygon_zones
       sorting_weight: 20
   - platform: template
-    name: "Polygon Zone 2"
+    name: "Polygon zone 2"
     id: poly_zone_2
     mode: text
     optimistic: true
@@ -1420,7 +1420,7 @@ text:
       sorting_group_id: polygon_zones
       sorting_weight: 30
   - platform: template
-    name: "Polygon Zone 3"
+    name: "Polygon zone 3"
     id: poly_zone_3
     mode: text
     optimistic: true
@@ -1452,7 +1452,7 @@ text:
       sorting_group_id: polygon_zones
       sorting_weight: 40
   - platform: template
-    name: "Polygon Zone 4"
+    name: "Polygon zone 4"
     id: poly_zone_4
     mode: text
     optimistic: true
@@ -1484,7 +1484,7 @@ text:
       sorting_group_id: polygon_zones
       sorting_weight: 50
   - platform: template
-    name: "Polygon Exclusion 1"
+    name: "Polygon exclusion 1"
     id: poly_exclusion_1
     mode: text
     optimistic: true
@@ -1516,7 +1516,7 @@ text:
       sorting_group_id: polygon_zones
       sorting_weight: 80
   - platform: template
-    name: "Polygon Exclusion 2"
+    name: "Polygon exclusion 2"
     id: poly_exclusion_2
     mode: text
     optimistic: true
@@ -1548,7 +1548,7 @@ text:
       sorting_group_id: polygon_zones
       sorting_weight: 90
   - platform: template
-    name: "Polygon Entry 1"
+    name: "Polygon entry 1"
     id: poly_entry_1
     mode: text
     optimistic: true
@@ -1580,7 +1580,7 @@ text:
       sorting_group_id: polygon_zones
       sorting_weight: 60
   - platform: template
-    name: "Polygon Entry 2"
+    name: "Polygon entry 2"
     id: poly_entry_2
     mode: text
     optimistic: true
